@@ -1,0 +1,202 @@
+/*CONTACTO*/
+
+.contacto{
+    padding: 10px 0;
+    background: #f5f9ff;
+}
+
+.personalisado{
+    width: 100%;
+    max-width: 950px;
+    margin: auto;
+    background: #fff;
+    padding: 45px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+}
+
+.personalisado h3{
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0a2f5a;
+    margin-bottom: 15px;
+}
+
+.personalisado>p{
+    text-align: center;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+/*FORMULARIO*/
+
+.personalisado form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Campos que ocupan toda la fila */
+
+.personalisado textarea,
+.personalisado button,
+.personalisado input[type=file],
+.personalisado select[name=tiempo]{
+    grid-column: 1/3;
+}
+
+/* Etiquetas */
+
+.personalisado label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Inputs */
+
+.personalisado input,
+.personalisado select,
+.personalisado textarea{
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: .3s;
+    background: #fafafa;
+}
+
+.personalisado input:focus,
+.personalisado select:focus,
+.personalisado textarea:focus{
+    border-color: #00bfff;
+    box-shadow: 0 0 8px rgba(0,191,255,.3);
+    background: #fff;
+}
+
+.personalisado textarea{
+    resize: vertical;
+    min-height: 130px;
+}
+
+/*CHECKBOX*/
+
+.personalisado input[type=checkbox]{
+    width: auto;
+    margin-right: 8px;
+}
+
+.personalisado label:has(input[type=checkbox]){
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+/*BOTÓN*/
+
+.btnEnviar{
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg,#00bfff,#0066ff);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btnEnviar:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,191,255,.35);
+}
+
+.campo{
+    display:flex;
+    flex-direction:column;
+}
+
+.campo-completo{
+    grid-column:1 / 3;
+}
+
+.checks{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px 30px;
+    margin-top:10px;
+}
+
+.checks label{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+    font-weight:500;
+}
+
+.checks input{
+    width:18px;
+    height:18px;
+}
+
+.botones{
+    display:flex;
+    gap:20px;
+}
+
+.btnEnviar,
+.btnLimpiar{
+    flex:1;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.btnEnviar{
+    background:#0077ff;
+    color:#fff;
+}
+
+.btnEnviar:hover{
+    background:#005fd1;
+}
+
+.btnLimpiar{
+    background:#ececec;
+}
+
+.btnLimpiar:hover{
+    background:#d8d8d8;
+}
+
+/*   RESPONSIVE*/
+
+@media(max-width:768px){
+
+    .personalisado{
+        padding:30px;
+    }
+
+    .personalisado form{
+        display:block;
+    }
+
+    .personalisado label{
+        margin-top:18px;
+    }
+
+    .btnEnviar{
+        margin-top:20px;
+    }
+
+}

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="encabezado.css">
     <link rel="stylesheet" href="inicio.css">
     <link rel="stylesheet" href="servicios.css">
+    <link rel="stylesheet" href="conocenos.css">
+    <link rel="stylesheet" href="contacto.css">
 
 </head>
 <body>
@@ -15,9 +17,11 @@
         <div class="header__container">
 
             <div class="header__logo">
-                <img src="img/logo.png" alt="Softdata logo">
+                <a href="#" class="logo">
+                    <span class="logo-tech">Tech</span><span class="logo-forge">Forge</span>
+                </a>
             </div>
-
+            
             <nav class="header__nav">
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
@@ -44,7 +48,7 @@
                     </p>
 
                     <div class="inicio__botones">
-                        <a href="#servicios" class="btn btn-primary">Conócenos</a>
+                        <a href="#conocenos" class="btn btn-primary">Conócenos</a>
                         <a href="#contacto" class="btn btn-outline">Contáctanos</a>
                     </div>
                 </div>
@@ -54,45 +58,48 @@
         <section class="servicios" id="servicios">
             <div class="contenedor">
                 <h3>Nuestros Servicios</h3>
-                <p>Ofrecemos una amplia gama de servicios tecnológicos para satisfacer las necesidades de su empresa.</p>
+                <p>Desarrollamos soluciones tecnológicas innovadoras que impulsan la transformación digital y el crecimiento de su empresa.</p>
+
                 <div class="N_servicios">
                     <div class="cartas">
+
                         <div class="carta">
                             <span><i class="fa-solid fa-laptop-code"></i></span>
                             <h4>Desarrollo Web</h4>
-                            <p>Diseñamos y desarrollamos sitios web modernos y funcionales que ayudan a su empresa a destacar en línea.</p>
+                            <p>Creamos sitios web y aplicaciones web modernas, seguras y responsivas, adaptadas a las necesidades de su negocio.</p>
                         </div>
 
                         <div class="carta">
                             <span><i class="fa-solid fa-microchip"></i></span>
-                            <h4>Desarrollo de Sistemas</h4>
-                            <p>Desarrollamos soluciones personalizadas para automatizar y optimizar los procesos de su empresa.</p>
+                            <h4>Desarrollo de Software</h4>
+                            <p>Diseñamos sistemas personalizados que optimizan procesos, mejoran la productividad y facilitan la gestión empresarial.</p>
                         </div>
 
                         <div class="carta">
                             <span><i class="fa-solid fa-chart-line"></i></span>
                             <h4>Análisis de Datos</h4>
-                            <p>Realizamos un análisis detallado de los requisitos de su empresa para ofrecer soluciones adecuadas.</p>
+                            <p>Transformamos datos en información valiosa mediante análisis y visualizaciones que apoyan la toma de decisiones estratégicas.</p>
                         </div>
 
                         <div class="carta">
                             <span><i class="fa-solid fa-gears"></i></span>
                             <h4>Automatización de Procesos</h4>
-                            <p>Automatizamos los procesos de su empresa para mejorar la eficiencia y reducir costos.</p>
+                            <p>Implementamos soluciones que automatizan tareas repetitivas, reduciendo tiempos, costos y errores operativos.</p>
                         </div>
 
                         <div class="carta">
                             <span><i class="fa-solid fa-database"></i></span>
-                            <h4>Base de Datos</h4>
-                            <p>Diseñamos y mantenemos bases de datos eficientes para almacenar y gestionar la información de su empresa.</p>
+                            <h4>Gestión de Bases de Datos</h4>
+                            <p>Diseñamos, administramos y optimizamos bases de datos para garantizar un almacenamiento seguro y un acceso eficiente a la información.</p>
                         </div>
 
                         <div class="carta">
                             <span><i class="fa-solid fa-headset"></i></span>
-                            <h4>Soporte Técnico</h4>
-                            <p>Ofrecemos soporte técnico especializado para resolver cualquier problema o duda relacionada con nuestra tecnología.</p>
+                            <h4>Soporte y Mantenimiento</h4>
+                            <p>Brindamos mantenimiento preventivo, correctivo y soporte técnico para asegurar el funcionamiento continuo de sus sistemas.</p>
                         </div>
-                    </div>                
+
+                    </div>
                 </div>
             </div>
         </section>
@@ -127,72 +134,123 @@
         </section>
 
         <section class="conocenos" id="conocenos">
+            <div class="contenedor">
+                <div class="cnt-titulo">
+                    <h3>Innovamos para construir el futuro digital</h3>
+                    <p>En TechForge creemos que la tecnología es el motor de la innovación. Desarrollamos software inteligente, plataformas digitales y soluciones tecnológicas que permiten a empresas y emprendedores alcanzar sus objetivos de manera más eficiente.Trabajamos con un enfoque basado en la innovación, la calidad y el compromiso, creando productos que combinan diseño, funcionalidad y alto rendimiento.</p>
+                </div>
+                <div class="cnt-parrafos">
+                    <div class="objetivo">
+                        <div class="mision">
+                            <h4>Misión</h4>
+                            <p>Brindar soluciones de software innovadoras y de alta calidad que impulsen la transformación digital de empresas y organizaciones, ofreciendo tecnología confiable, segura y adaptada a las necesidades de cada cliente.</p>
+                        </div>
+                        <div class="vision">
+                            <h4>Visión</h4>
+                            <p>Ser una empresa líder en desarrollo de software, reconocida por la innovación, la excelencia tecnológica y el impacto positivo de nuestras soluciones en el crecimiento de nuestros clientes.</p>
+                        </div>
+                    </div>
+                    <div class="valores">
+                        <h4>Nuestros Valores</h4>
+                        <ul>
+                            <li>💡Innovación</li>
+                            <li>🤝 Compromiso</li>
+                            <li>🔒 Seguridad</li>
+                            <li>⭐ Calidad</li>
+                            <li>🚀 Excelencia</li>
+                            <li>👥 Trabajo en equipo</li>
+                            <li>📈 Mejora continua</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="contacto" id="contacto">
             <div class="personalisado">
                 <h3>Desarrolla tu Proyecto con Nosotros</h3>
-                <p>Cuéntanos tu idea y los requerimientos de tu proyecto. Nuestro equipo analizará tu solicitud para ofrecerte una solución adaptada a tus necesidades, ya sea una página web o un sistema personalizado.</p>
-                <form action="">
-                    <label>Nombre:</label>
-                    <input type="text" name="nombre" required>
-                    <label>Correo:</label>
-                    <input type="email" name="emal" required>
-                    <label>Teléfono/WhatsApp:</label>
-                    <input type="number" name="telefono" required>
-                    <label >Empresa:</label>
-                    <input type="text" name="empresa">
-
-                    <label>Tipo de servicio:</label>
-                    <select name="servicio" required>
-                        <option value="">Seleccione un servicio</option>
-                        <option value="web">Desarrollo Web</option>
-                        <option value="sistemas">Desarrollo de Sistemas</option>
-                        <option value="datos">Análisis de Datos</option>
-                        <option value="automatizacion">Automatización de Procesos</option>
-                        <option value="bd">Base de Datos</option>
-                        <option value="soporte">Soporte Técnico</option>
-                    </select>
-
-                    <label>Descripción:</label>
-                    <textarea name="descripcion" rows="5" placeholder="Describe tu idea, qué problema quieres resolver."></textarea>
-
-                    <label>Funcionalidades:</label>
-                    <label><input type="checkbox" name="funciones[]" value="login">Sistema de usuario</label>
-                    <label><input type="checkbox" name="funciones[]" value="pagos">Pagos en linea</label>
-                    <label><input type="checkbox" name="funciones[]" value="reportes">Reportes</label>
-                    <label><input type="checkbox" name="funciones[]" value="dashboard">Panel administrativo</label>
-                    
-                    <label>Necesidad:</label>
-                    <select name="tiempo">
-                        <option value="">¿Cuándo lo necesitas?</option>
-                        <option value="urgente">Urgente</option>
-                        <option value="1mes">1 mes</option>
-                        <option value="flexible">Flexible</option>
-                    </select>
-
-                    <label>Archivo(opcional):</label>
-                    <input type="file" name="archivo">
-
-                    <button class="btnEnviar">Enviar</button>
+                <p>
+                    Cuéntanos tu idea y los requerimientos de tu proyecto.
+                    Nuestro equipo analizará tu solicitud para ofrecerte la mejor
+                    solución tecnológica para tu empresa.
+                </p>
+                <form>
+                    <div class="campo">
+                        <label>Nombre completo</label>
+                        <input type="text" name="nombre" placeholder="Ingresa tu nombre completo" required>
+                    </div>
+                    <div class="campo">
+                        <label>Correo electrónico</label>
+                        <input type="email" name="email" placeholder="correo@empresa.com" required>
+                    </div>
+                    <div class="campo">
+                        <label>Teléfono / WhatsApp</label>
+                        <input type="tel" name="telefono" placeholder="+51 999 999 999" required>
+                    </div>
+                    <div class="campo">
+                        <label>Empresa (Opcional)</label>
+                        <input type="text" name="empresa" placeholder="Nombre de tu empresa">
+                    </div>
+                    <div class="campo campo-completo">
+                        <label>Servicio requerido</label>
+                        <select name="servicio" required>
+                            <option value="">Seleccione un servicio</option>
+                            <option>Desarrollo Web</option>
+                            <option>Desarrollo de Software</option>
+                            <option>Análisis de Datos</option>
+                            <option>Automatización de Procesos</option>
+                            <option>Gestión de Bases de Datos</option>
+                            <option>Soporte y Mantenimiento</option>
+                        </select>
+                    </div>
+                    <div class="campo campo-completo">
+                        <label>Descripción del proyecto</label>
+                        <textarea
+                            rows="6"
+                            placeholder="Describe tu proyecto, el problema que deseas resolver y cualquier detalle importante."></textarea>
+                    </div>
+                    <div class="campo campo-completo">
+                        <label>Funcionalidades que necesitas</label>
+                        <div class="checks">
+                            <label><input type="checkbox">Sistema de usuarios</label>
+                            <label><input type="checkbox">Panel administrativo</label>
+                            <label><input type="checkbox">Reportes</label>
+                            <label><input type="checkbox">Pagos en línea</label>
+                            <label><input type="checkbox">Notificaciones</label>
+                            <label><input type="checkbox">Integración con APIs</label>
+                        </div>
+                    </div>
+                    <div class="campo">
+                        <label>¿Cuándo lo necesitas?</label>
+                        <select>
+                            <option>Seleccione una opción</option>
+                            <option>Lo antes posible</option>
+                            <option>En 1 mes</option>
+                            <option>Entre 2 y 3 meses</option>
+                            <option>No tengo una fecha definida</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label>Adjuntar archivo (Opcional)</label>
+                        <input type="file">
+                    </div>
+                    <div class="campo campo-completo botones">
+                        <button type="submit" class="btnEnviar">
+                            Enviar Solicitud
+                        </button>
+                        <button type="reset" class="btnLimpiar">
+                            Limpiar
+                        </button>
+                    </div>
+                    <p class="mensaje">
+                        Nuestro equipo responderá tu solicitud en un plazo máximo de 24 horas hábiles.
+                    </p>
                 </form>
-
-
-            </div>
-
-            <div class="informativo">
-                <h3>Contáctanos Rapido</h3>
-                <p>¿Tienes alguna duda o deseas más información? Escríbenos y te responderemos lo antes posible para ayudarte con lo que necesites.</p>
-                <div>
-                    
-                </div>
             </div>
         </section>
     </main>
 
     <footer>
-
-
     </footer>
 </body>
 </html>

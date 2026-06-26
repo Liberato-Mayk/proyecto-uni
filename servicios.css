@@ -1,6 +1,4 @@
-/* =========================
-   SECCIÓN GENERAL
-========================= */
+/* SECCIÓN GENERAL*/
 .servicios,
 .proyectos {
     padding: 80px 20px;
@@ -26,18 +24,14 @@ p {
     font-size: 16px;
 }
 
-/* =========================
-   GRID DE CARTAS (3 FILAS)
-========================= */
+/* GRID DE CARTAS (3 FILAS)*/
 .cartas {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas = 3 por fila */
     gap: 25px;
 }
 
-/* =========================
-   CARTA ESTILO SOFTDATA
-========================= */
+/* CARTA ESTILO SOFTDATA*/
 .carta {
     background: #ffffff;
     border-radius: 14px;
@@ -80,9 +74,7 @@ p {
     line-height: 1.5;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 @media (max-width: 992px) {
     .cartas {
         grid-template-columns: repeat(2, 1fr);

@@ -1,6 +1,4 @@
-/* =========================
-   RESET BÁSICO
-========================= */
+/*RESET BÁSICO*/
 * {
     margin: 0;
     padding: 0;
@@ -8,9 +6,7 @@
     font-family: Arial, sans-serif;
 }
 
-/* =========================
-   HEADER MODERNO
-========================= */
+/*HEADER MODERNO*/
 .header {
     position: sticky;
     top: 0;
@@ -33,18 +29,32 @@
     padding: 12px 0;
 }
 
-/* LOGO */
-.header__logo img {
-    width: 70px;
-    height: 70px;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
+/*LOGO*/ 
+.header__logo{
+    display: flex;
+    align-items: center;
 }
 
-.header__logo img:hover {
-    transform: scale(1.08);
+.logo{
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: .3s ease;
 }
 
+.logo-tech{
+    color: #ffffff;
+}
+
+.logo-forge{
+    color: #00c6ff;
+}
+
+.logo:hover{
+    transform: scale(1.05);
+    text-shadow: 0 0 10px rgba(0,198,255,.6);
+}
 /* NAV */
 .header__nav ul {
     list-style: none;
@@ -82,9 +92,7 @@
     width: 100%;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/*RESPONSIVE */
 @media (max-width: 768px) {
 
     .header__container {
