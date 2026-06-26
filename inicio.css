@@ -1,0 +1,49 @@
+.inicio {
+    height: 100vh;
+    background-image: url('img/inicio.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.inicio div {
+    margin-left: 65px;
+    max-width: 600px;
+}
+
+#texto h1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+#texto p {
+    color: #d1d5db;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.botones {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 15px 35px;
+    border-radius: 10px;
+    border: 2px solid #00d4ff;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00d4ff;
+    color: #000;
+}
