@@ -1,49 +1,110 @@
+/* =========================
+   HERO / INICIO
+========================= */
 .inicio {
+    position: relative;
     height: 100vh;
-    background-image: url('img/inicio.png');
+    background-image: url('img/inicio2.png');
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
-}
-
-.inicio div {
-    margin-left: 65px;
-    max-width: 600px;
-}
-
-#texto h1 {
     color: white;
-    font-size: 4rem;
-    font-weight: bold;
+}
+
+/* OSCURECER FONDO PARA LEGIBILIDAD */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(5, 20, 40, 0.85),
+        rgba(0, 60, 120, 0.35)
+    );
+}
+
+/* CONTENIDO */
+.inicio__contenido {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 60px;
+    width: 100%;
+}
+
+/* TEXTO */
+.inicio__texto {
+    max-width: 650px;
+}
+
+.inicio__texto h1 {
+    font-size: 3.8rem;
+    font-weight: 800;
     line-height: 1.1;
     margin-bottom: 20px;
+    color: #ffffff;
 }
 
-#texto p {
-    color: #d1d5db;
-    font-size: 1.3rem;
+.inicio__texto p {
+    font-size: 1.2rem;
     line-height: 1.6;
-    margin-bottom: 40px;
+    color: #dbe7f3;
+    margin-bottom: 35px;
 }
 
-.botones {
+/* BOTONES */
+.inicio__botones {
     display: flex;
-    gap: 20px;
+    gap: 18px;
 }
 
+/* BOTÓN BASE */
 .btn {
-    padding: 15px 35px;
+    padding: 14px 32px;
     border-radius: 10px;
-    border: 2px solid #00d4ff;
-    background: transparent;
-    color: white;
     font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
 }
 
-.btn:hover {
-    background: #00d4ff;
-    color: #000;
+/* PRIMARIO */
+.btn-primary {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 150, 255, 0.3);
+}
+
+/* OUTLINE */
+.btn-outline {
+    border: 2px solid #00c6ff;
+    color: white;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: #00c6ff;
+    color: #001018;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .inicio__contenido {
+        padding: 0 25px;
+        text-align: center;
+    }
+
+    .inicio__texto h1 {
+        font-size: 2.5rem;
+    }
+
+    .inicio__botones {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }

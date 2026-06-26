@@ -4,87 +4,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="encabezado.css">
     <link rel="stylesheet" href="inicio.css">
+    <link rel="stylesheet" href="servicios.css">
 
 </head>
 <body>
-    <header>
-        <div class="encabezado">
-            <div id="logo">
-                <img src="img/logo.png" alt="logo de mi empresa softdata" width="100px" height="100px">
+    <header class="header">
+        <div class="header__container">
+
+            <div class="header__logo">
+                <img src="img/logo.png" alt="Softdata logo">
             </div>
-            <div id="info-datos">
-                <div>
-                    <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#servicios">servicios</a></li>
-                        <li><a href="#proyectos">Proyectos</a></li>
-                        <li><a href="#conocenos">Conocenos</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                    </ul>
-                </div>
-            </div>
+
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#conocenos">Conócenos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
         </div>
     </header>
 
     <main>
         <section class="inicio" id="inicio">
-            <div class="inicio">
-                <div id="texto">
-                    <h1>EL PODER DE LA TECNOLOGÍA <br>A FAVOR DE SU EMPRESA </h1>
-                    <p>Fortalecemos su empresa con las mejores soluciones y productos en tecnología de la información</p>
-                </div>
-                <div class="botones">
-                    <button href="#" class="btn">Conocenos</button>
-                    <button href="#" class="btn">Contáctanos</button>
+            <div class="overlay"></div>
+
+            <div class="inicio__contenido">
+                <div class="inicio__texto">
+                    <h1>EL PODER DE LA TECNOLOGÍA <br>A FAVOR DE SU EMPRESA</h1>
+                    <p>
+                        Fortalecemos su empresa con soluciones innovadoras en tecnología de la información,
+                        impulsando su crecimiento digital.
+                    </p>
+
+                    <div class="inicio__botones">
+                        <a href="#servicios" class="btn btn-primary">Conócenos</a>
+                        <a href="#contacto" class="btn btn-outline">Contáctanos</a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="servicios" id="servicios">
-            <div class="servicios">
+            <div class="contenedor">
                 <h3>Nuestros Servicios</h3>
                 <p>Ofrecemos una amplia gama de servicios tecnológicos para satisfacer las necesidades de su empresa.</p>
-                <div id="N_servicios">
+                <div class="N_servicios">
                     <div class="cartas">
-                        <div id="carta">
-                            <span><i class="fa-sharp fa-solid fa-browsers"></i></span>
+                        <div class="carta">
+                            <span><i class="fa-solid fa-laptop-code"></i></span>
                             <h4>Desarrollo Web</h4>
                             <p>Diseñamos y desarrollamos sitios web modernos y funcionales que ayudan a su empresa a destacar en línea.</p>
                         </div>
 
-                        <div id="carta">
-                            <span><i class="fa-sharp-duotone fa-thin fa-sitemap"></i></span>
+                        <div class="carta">
+                            <span><i class="fa-solid fa-microchip"></i></span>
                             <h4>Desarrollo de Sistemas</h4>
                             <p>Desarrollamos soluciones personalizadas para automatizar y optimizar los procesos de su empresa.</p>
                         </div>
 
-                        <div id="carta">
-                            <span><i class="fa-duotone fa-regular fa-chart-fft"></i></span>
+                        <div class="carta">
+                            <span><i class="fa-solid fa-chart-line"></i></span>
                             <h4>Análisis de Datos</h4>
                             <p>Realizamos un análisis detallado de los requisitos de su empresa para ofrecer soluciones adecuadas.</p>
                         </div>
 
-                        <div id="carta">
-                            <span><i class="fa-sharp-duotone fa-regular fa-diagram-sankey"></i></span>
+                        <div class="carta">
+                            <span><i class="fa-solid fa-gears"></i></span>
                             <h4>Automatización de Procesos</h4>
                             <p>Automatizamos los procesos de su empresa para mejorar la eficiencia y reducir costos.</p>
                         </div>
 
-                        <div id="carta">
-                            <span><i class="fa-sharp-duotone fa-regular fa-database"></i></span>
+                        <div class="carta">
+                            <span><i class="fa-solid fa-database"></i></span>
                             <h4>Base de Datos</h4>
                             <p>Diseñamos y mantenemos bases de datos eficientes para almacenar y gestionar la información de su empresa.</p>
                         </div>
 
-                        <div id="carta">
-                            <span><i class="fa-sharp-duotone fa-regular fa-headset"></i></span>
+                        <div class="carta">
+                            <span><i class="fa-solid fa-headset"></i></span>
                             <h4>Soporte Técnico</h4>
                             <p>Ofrecemos soporte técnico especializado para resolver cualquier problema o duda relacionada con nuestra tecnología.</p>
                         </div>
                     </div>                
+                </div>
+            </div>
+        </section>
+
+        <section class="proyectos" id="proyectos">
+            <div class="contenedor">
+                <h3>Proyectos</h3>
+                <p>Conozca algunos de nuestros proyectos más recientes y cómo hemos ayudado a nuestros clientes a alcanzar sus objetivos.</p>
+                <div id="N_proyectos">
+                    <div class="cartas">
+                        <div class="carta">
+                            <span><i class="fa-sharp fa-solid fa-browsers"></i></span>
+                            <h4>Proyecto 1</h4>
+                            <p>Descripción breve del proyecto 1 y cómo ayudó al cliente a mejorar su negocio.</p>
+                        </div>
+
+                        <div class="carta">
+                            <span><i class="fa-sharp-duotone fa-thin fa-sitemap"></i></span>
+                            <h4>Proyecto 2</h4>
+                            <p>Descripción breve del proyecto 2 y los resultados obtenidos para el cliente.</p>
+                        </div>
+
+                        <div class="carta">
+                            <span><i class="fa-duotone fa-regular fa-chart-fft"></i></span>
+                            <h4>Proyecto 3</h4>
+                            <p>Descripción breve del proyecto 3 y cómo se implementaron soluciones innovadoras.</p>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+
+        </section>
+
+        <section class="conocenos" id="conocenos">
+        </section>
+
+        <section class="contacto" id="contacto">
+            <div class="personalisado">
+                <h3>Desarrolla tu Proyecto con Nosotros</h3>
+                <p>Cuéntanos tu idea y los requerimientos de tu proyecto. Nuestro equipo analizará tu solicitud para ofrecerte una solución adaptada a tus necesidades, ya sea una página web o un sistema personalizado.</p>
+                <form action="">
+                    <label>Nombre:</label>
+                    <input type="text" name="nombre" required>
+                    <label>Correo:</label>
+                    <input type="email" name="emal" required>
+                    <label>Teléfono/WhatsApp:</label>
+                    <input type="number" name="telefono" required>
+                    <label >Empresa:</label>
+                    <input type="text" name="empresa">
+
+                    <label>Tipo de servicio:</label>
+                    <select name="servicio" required>
+                        <option value="">Seleccione un servicio</option>
+                        <option value="web">Desarrollo Web</option>
+                        <option value="sistemas">Desarrollo de Sistemas</option>
+                        <option value="datos">Análisis de Datos</option>
+                        <option value="automatizacion">Automatización de Procesos</option>
+                        <option value="bd">Base de Datos</option>
+                        <option value="soporte">Soporte Técnico</option>
+                    </select>
+
+                    <label>Descripción:</label>
+                    <textarea name="descripcion" rows="5" placeholder="Describe tu idea, qué problema quieres resolver."></textarea>
+
+                    <label>Funcionalidades:</label>
+                    <label><input type="checkbox" name="funciones[]" value="login">Sistema de usuario</label>
+                    <label><input type="checkbox" name="funciones[]" value="pagos">Pagos en linea</label>
+                    <label><input type="checkbox" name="funciones[]" value="reportes">Reportes</label>
+                    <label><input type="checkbox" name="funciones[]" value="dashboard">Panel administrativo</label>
+                    
+                    <label>Necesidad:</label>
+                    <select name="tiempo">
+                        <option value="">¿Cuándo lo necesitas?</option>
+                        <option value="urgente">Urgente</option>
+                        <option value="1mes">1 mes</option>
+                        <option value="flexible">Flexible</option>
+                    </select>
+
+                    <label>Archivo(opcional):</label>
+                    <input type="file" name="archivo">
+
+                    <button class="btnEnviar">Enviar</button>
+                </form>
+
+
+            </div>
+
+            <div class="informativo">
+                <h3>Contáctanos Rapido</h3>
+                <p>¿Tienes alguna duda o deseas más información? Escríbenos y te responderemos lo antes posible para ayudarte con lo que necesites.</p>
+                <div>
+                    
                 </div>
             </div>
         </section>

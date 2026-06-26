@@ -1,0 +1,96 @@
+/* =========================
+   SECCIÓN GENERAL
+========================= */
+.servicios,
+.proyectos {
+    padding: 80px 20px;
+    background: #f5f9ff;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+h3 {
+    font-size: 32px;
+    color: #0b2a4a;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #5b6b7a;
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+/* =========================
+   GRID DE CARTAS (3 FILAS)
+========================= */
+.cartas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas = 3 por fila */
+    gap: 25px;
+}
+
+/* =========================
+   CARTA ESTILO SOFTDATA
+========================= */
+.carta {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 60, 120, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #e6eef7;
+}
+
+.carta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 80, 160, 0.15);
+}
+
+/* ICONO */
+.carta span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    border-radius: 12px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 22px;
+}
+
+/* TITULO */
+.carta h4 {
+    font-size: 18px;
+    color: #0b2a4a;
+    margin-bottom: 10px;
+}
+
+/* TEXTO */
+.carta p {
+    font-size: 14px;
+    color: #5b6b7a;
+    line-height: 1.5;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+    .cartas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cartas {
+        grid-template-columns: 1fr;
+    }
+}
