@@ -2,7 +2,7 @@
 .inicio {
     position: relative;
     height: 100vh;
-    background-image: url('img/inicio2.png');
+    background-image: url('../img/inicio2.png');
     background-size: cover;
     background-position: center;
     display: flex;
