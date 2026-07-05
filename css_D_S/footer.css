@@ -1,0 +1,140 @@
+:root{
+    --color-bg: #0f172a;
+    --color-card: #1e293b;
+    --color-primary: #4f9cff;
+    --color-text: #d1d5db;
+    --color-muted: #9ca3af;
+    --color-white: #ffffff;
+}
+
+/* FOOTER BASE */
+footer{ 
+    background: linear-gradient(180deg, #0f172a 0%, #020617 100%);
+    color: var(--color-white);
+    padding: 30px 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+    gap: 20px;
+}
+
+/* TITULOS */
+footer h4{
+    font-size: 16px;
+    margin-bottom: 18px;
+    color: var(--color-primary);
+    letter-spacing: 0.5px;
+}
+
+/* LOGO */
+.footer-logo a{
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.footer-logo-tech{
+    color: var(--color-primary);
+}
+
+.footer-logo-forge{
+    color: var(--color-white);
+}
+
+/* NAVEGACIÓN */
+.footer-nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav li{
+    margin-bottom: 10px;
+}
+
+.footer-nav a{
+    color: var(--color-text);
+    text-decoration: none;
+    position: relative;
+    transition: all .3s ease;
+}
+
+.footer-nav a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background: var(--color-primary);
+    transition: width .3s ease;
+}
+
+.footer-nav a:hover{
+    color: var(--color-white);
+}
+
+.footer-nav a:hover::after{
+    width: 100%;
+}
+
+/* CONTACTO */
+.footer-contacto p{
+    margin: 10px 0;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.footer-contacto i{
+    color: var(--color-primary);
+    font-size: 16px;
+}
+
+/* REDES SOCIALES */
+.red-social a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    margin-right: 8px;
+    margin-top: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(6px);
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 18px;
+    transition: all .3s ease;
+}
+
+.red-social a:hover{
+    background: var(--color-primary);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(79,156,255,0.3);
+}
+
+/* COPYRIGHT */
+.footer-copy{
+    grid-column: 1/-1;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,.1);
+    text-align: center;
+    color: var(--color-muted);
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+    footer{
+        padding: 50px 8% 20px;
+        gap: 25px;
+    }
+
+    .footer-logo a{
+        font-size: 28px;
+    }
+}

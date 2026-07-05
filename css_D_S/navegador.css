@@ -1,0 +1,108 @@
+/*RESET BÁSICO*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/*HEADER MODERNO*/
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(10, 25, 45, 0.75);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* CONTENEDOR */
+.header__container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+}
+
+/*LOGO*/ 
+.header__logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: .3s ease;
+}
+
+.logo-tech{
+    color: #ffffff;
+}
+
+.logo-forge{
+    color: #00c6ff;
+}
+
+.logo:hover{
+    transform: scale(1.05);
+    text-shadow: 0 0 10px rgba(0,198,255,.6);
+}
+/* NAV */
+.header__nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+/* LINKS */
+.header__nav a {
+    text-decoration: none;
+    color: #eaf2ff;
+    font-weight: 500;
+    font-size: 15px;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* EFECTO LINEA ANIMADA */
+.header__nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    transition: 0.3s;
+}
+
+.header__nav a:hover {
+    color: #00c6ff;
+}
+
+.header__nav a:hover::after {
+    width: 100%;
+}
+
+/*RESPONSIVE */
+@media (max-width: 768px) {
+
+    .header__container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header__nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}

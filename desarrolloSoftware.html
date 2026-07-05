@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css_D_S/navegador.css">
+    <link rel="stylesheet" href="css_D_S/contacto.css">
+    <link rel="stylesheet" href="css_D_S/footer.css">
 </head>
 <body>
+
+    <header class="header">
+        <div class="header__container">
+
+            <div class="header__logo">
+                <a href="#" class="logo">
+                    <span class="logo-tech">Tech</span><span class="logo-forge">Forge</span>
+                </a>
+            </div>
+            
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="/principal.html#inicio">Inicio</a></li>
+                    <li><a href="/principal.html#servicios">Servicios</a></li>
+                    <li><a href="/principal.html#proyectos">Proyectos</a></li>
+                    <li><a href="/principal.html#conocenos">Conócenos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
     <section>
         <div class="seccion1">
             <div class="encabezado">
@@ -58,5 +84,161 @@
             </div>
         </div>
     </section>
+
+    <section>
+        <div class="seccion3">
+            <div class="titulo-objetivos">
+                <h3>"Objetivos de la plataforma"</h3>
+            </div>
+            <div class="objetivos">
+                <div class="cart">
+                    <h4>Optimizar la Gestión Comercial</h4>
+                    <p>Centralizar la administración de productos, categorías, clientes y ventas en una única plataforma para simplificar las operaciones del negocio.</p>
+                </div>
+                <div class="cart">
+                    <h4>Integrar todos los módulos</h4>
+                    <p>Conectar el sistema de punto de venta con la base de datos y la página web mediante APIs para garantizar una comunicación eficiente y segura.</p>
+                </div>
+                <div class="cart">
+                    <h4>Mejorar el Control de la Información</h4>
+                    <p>Mantener la información organizada y actualizada en tiempo real para facilitar la toma de decisiones.</p>
+                </div>
+                <div class="cart">
+                    <h4>Fortalecer la Comunicación</h4>
+                    <p>Centralizar los mensajes enviados desde la página web para agilizar la atención y el seguimiento de los clientes.</p>
+                </div>
+                <div class="cart">
+                    <h4>Garantizar la Integridad de los Datos</h4>
+                    <p>Asegurar que toda la información se almacene de forma segura y consistente mediante una base de datos centralizada.</p>
+                </div>
+                <div class="cart">
+                    <h4>Ofrecer una Plataforma Escalable</h4>
+                    <p>Diseñar un sistema preparado para incorporar nuevas funcionalidades conforme evolucionen las necesidades del negocio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+            <div class="personalisado">
+                <h3>Desarrolla tu Proyecto con Nosotros</h3>
+                <p>
+                    Cuéntanos tu idea y los requerimientos de tu proyecto.
+                    Nuestro equipo analizará tu solicitud para ofrecerte la mejor
+                    solución tecnológica para tu empresa.
+                </p>
+                <form>
+                    <div class="campo">
+                        <label>Nombre completo</label>
+                        <input type="text" name="nombre" placeholder="Ingresa tu nombre completo" required>
+                    </div>
+                    <div class="campo">
+                        <label>Correo electrónico</label>
+                        <input type="email" name="email" placeholder="correo@empresa.com" required>
+                    </div>
+                    <div class="campo">
+                        <label>Teléfono / WhatsApp</label>
+                        <input type="tel" name="telefono" placeholder="+51 999 999 999" required>
+                    </div>
+                    <div class="campo">
+                        <label>Empresa (Opcional)</label>
+                        <input type="text" name="empresa" placeholder="Nombre de tu empresa">
+                    </div>
+                    <div class="campo campo-completo">
+                        <label>Servicio requerido</label>
+                        <select name="servicio" required>
+                            <option value="">Seleccione un servicio</option>
+                            <option>Desarrollo Web</option>
+                            <option>Desarrollo de Software</option>
+                            <option>Análisis de Datos</option>
+                            <option>Automatización de Procesos</option>
+                            <option>Gestión de Bases de Datos</option>
+                            <option>Soporte y Mantenimiento</option>
+                        </select>
+                    </div>
+                    <div class="campo campo-completo">
+                        <label>Descripción del proyecto</label>
+                        <textarea
+                            rows="6"
+                            placeholder="Describe tu proyecto, el problema que deseas resolver y cualquier detalle importante."></textarea>
+                    </div>
+                    <div class="campo campo-completo">
+                        <label>Funcionalidades que necesitas</label>
+                        <div class="checks">
+                            <label><input type="checkbox">Sistema de usuarios</label>
+                            <label><input type="checkbox">Panel administrativo</label>
+                            <label><input type="checkbox">Reportes</label>
+                            <label><input type="checkbox">Pagos en línea</label>
+                            <label><input type="checkbox">Notificaciones</label>
+                            <label><input type="checkbox">Integración con APIs</label>
+                        </div>
+                    </div>
+                    <div class="campo">
+                        <label>¿Cuándo lo necesitas?</label>
+                        <select>
+                            <option>Seleccione una opción</option>
+                            <option>Lo antes posible</option>
+                            <option>En 1 mes</option>
+                            <option>Entre 2 y 3 meses</option>
+                            <option>No tengo una fecha definida</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label>Adjuntar archivo (Opcional)</label>
+                        <input type="file">
+                    </div>
+                    <div class="campo campo-completo botones">
+                        <button type="submit" class="btnEnviar">
+                            Enviar Solicitud
+                        </button>
+                        <button type="reset" class="btnLimpiar">
+                            Limpiar
+                        </button>
+                    </div>
+                    <p class="mensaje">
+                        Nuestro equipo responderá tu solicitud en un plazo máximo de 24 horas hábiles.
+                    </p>
+                </form>
+            </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">
+            <a href="#" class="footer-logo">
+                <span class="footer-logo-tech">Tech</span><span class="footer-logo-forge">Forge</span>
+            </a>
+        </div>
+
+        <div class="footer-nav">
+            <h4>Enlaces</h4>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#conocenos">Conócenos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contacto">
+            <h4>Contacto</h4>
+            <p><i class="fa-solid fa-envelope"></i> contacto@techforge.com</p>
+            <p><i class="fa-solid fa-phone"></i> +51 999 999 999</p>
+            <p><i class="fa-solid fa-location-dot"></i> Perú</p>
+        </div>
+
+        <div class="red-social">
+            <h4>Síguenos</h4>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+        </div>
+
+        <div class="footer-copy">
+            <p>© 2026 TechForge. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
