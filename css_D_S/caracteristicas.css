@@ -1,0 +1,85 @@
+/* ===== SECCIÓN CARACTERÍSTICAS ===== */
+.caracteristicas {
+    padding: 80px 10%;
+    background: #f5f9fc;
+}
+
+.titulo-caracteristicas {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.titulo-caracteristicas h2 {
+    font-size: 2.2rem;
+    color: #0a2540;
+    margin-bottom: 10px;
+}
+
+.titulo-caracteristicas p {
+    color: #5f6c7b;
+    font-size: 1rem;
+}
+
+/* CONTENEDOR DE CARTAS */
+.caracteristicas .caracteristicas {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* CARTA */
+.carta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* INTERCALADO */
+.carta:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* TEXTO */
+.carta-texto {
+    flex: 1;
+}
+
+.carta-texto h3 {
+    font-size: 1.5rem;
+    color: #0a2540;
+    margin-bottom: 15px;
+}
+
+.carta-texto p {
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+/* IMAGEN GRANDE */
+.carta-img {
+    flex: 1;
+}
+
+.carta-img img {
+    width: 100%;
+    max-width: 650px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .carta {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .carta:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .carta-img img {
+        max-width: 100%;
+    }
+}
