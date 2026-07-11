@@ -1,0 +1,102 @@
+/*=========================
+        INICIO
+=========================*/
+
+.inicio{
+    /* ocupa al menos la altura completa de la pantalla menos 88px */
+    min-height: calc(100vh - 88px);
+    /* usa flexbox para centrar el contenido verticalmente */
+    display: flex;
+    /* alinea el contenido al centro vertical dentro de la sección */
+    align-items: center;
+    /* agrega 60px de espacio arriba y abajo */
+    padding: 60px 0;
+    /* aplica un fondo degradado de blanco a azul muy claro */
+    background-color: #a09e97;
+}
+
+.inicio-contenedor{
+    /* usa 90% del ancho disponible */
+    width: 90%;
+    /* limita el ancho máximo a 1200px */
+    max-width: 1200px;
+    /* centra el contenedor horizontalmente */
+    margin: 0 auto;
+    /* define una cuadrícula CSS para el diseño interno */
+    display: grid;
+    /* crea dos columnas de igual ancho */
+    grid-template-columns: 1fr 1fr;
+    /* espacio de 60px entre filas y columnas */
+    gap: 60px;
+    /* alinea verticalmente el contenido al centro */
+    align-items: center;
+}
+
+.inicio-texto h1{
+    /* tamaño grande del texto principal */
+    font-size: 2.6rem;
+    /* hace el texto muy negrita */
+    font-weight: 800;
+    /* color azul oscuro para el título */
+    color: #0a2f5a;
+    /* espacio entre líneas ajustado para mejor lectura */
+    line-height: 1.25;
+    /* separa el título del resto del contenido con margen inferior */
+    margin-bottom: 22px;
+}
+
+.inicio-texto p{
+    /* color gris medio para los párrafos */
+    color: #555;
+    /* tamaño de fuente medio para texto de párrafo */
+    font-size: 1.05rem;
+    /* espacio entre líneas cómodo */
+    line-height: 1.75;
+    /* margen inferior para separar párrafos */
+    margin-bottom: 18px;
+}
+
+.inicio-texto p:last-child{
+    /* elimina el espacio inferior del último párrafo */
+    margin-bottom: 0;
+}
+
+.inicio-imagen{
+    /* usa flexbox para centrar la imagen horizontalmente */
+    display: flex;
+    /* centra el contenido dentro del contenedor */
+    justify-content: center;
+}
+
+.inicio-imagen img{
+    /* la imagen ocupa todo el ancho del contenedor */
+    width: 100%;
+    /* limita el tamaño máximo de la imagen a 480px */
+    max-width: 480px;
+    /* bordes redondeados para un diseño suave */
+    border-radius: 20px;
+    /* sombra para dar profundidad al bloque de imagen */
+    box-shadow: 0 20px 45px rgba(0,102,255,.18);
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px){
+    .inicio-contenedor{
+        /* cambia a una sola columna en pantallas pequeñas */
+        grid-template-columns: 1fr;
+        /* alinea el texto al centro cuando hay una sola columna */
+        text-align: center;
+        /* reduce el espacio entre elementos */
+        gap: 40px;
+    }
+
+    .inicio-imagen{
+        /* mueve la imagen antes del texto en el orden visual */
+        order: -1;
+    }
+
+    .inicio-texto p{
+        /* mantiene el texto alineado a la izquierda dentro de la columna centrada */
+        text-align: left;
+    }
+}

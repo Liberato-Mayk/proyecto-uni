@@ -1,0 +1,131 @@
+/*=========================
+        OBJETIVOS
+=========================*/
+
+.objetivos{
+    padding: 90px 0; /* agrega 90px de espacio arriba y abajo */
+    background: #6a6965; /* color de fondo oscuro para la sección */
+}
+
+.objetivo-principal{
+    max-width: 800px; /* limita el ancho de la sección principal */
+    margin: 0 auto 60px; /* centra el bloque y agrega espacio inferior */
+    text-align: center; /* centra el texto dentro del bloque */
+    padding: 0 20px; /* agrega espacio horizontal dentro del bloque */
+}
+
+.objetivo-principal h2{
+    font-size: 2.4rem; /* tamaño grande del título */
+    font-weight: 800; /* texto en negrita */
+    color: #ffffff; /* color blanco para buena visibilidad */
+    margin-bottom: 18px; /* espacio debajo del título */
+    position: relative; /* permite posicionar el pseudo-elemento decorativo */
+    display: inline-block; /* mantiene el ancho del título ajustado al contenido */
+}
+
+.objetivo-principal h2::after{
+    content: ''; /* pseudo-elemento vacío para la línea decorativa */
+    display: block; /* hace que el pseudo-elemento sea un bloque */
+    width: 70px; /* ancho de la línea decorativa */
+    height: 3px; /* grosor de la línea */
+    background: linear-gradient(90deg, #00c6ff, #0072ff); /* degradado azul */
+    margin: 16px auto 0; /* centra la línea debajo del título */
+    border-radius: 2px; /* bordes suavizados de la línea */
+}
+
+.objetivo-principal p{
+    color: #9ca3af; /* color gris claro para el texto descriptivo */
+    font-size: 1.1rem; /* tamaño de letra cómodo para lectura */
+    line-height: 1.8; /* espacio entre líneas para mejor legibilidad */
+}
+
+/* GRID DE OBJETIVOS */
+.objetivos-lista{
+    width: 90%; /* ancho del contenedor de tarjetas */
+    max-width: 1200px; /* límite máximo de ancho para pantallas grandes */
+    margin: 0 auto; /* centra el grid horizontalmente */
+    display: grid; /* usa grid para organizar los objetivos */
+    grid-template-columns: repeat(3, 1fr); /* tres columnas iguales */
+    gap: 28px; /* espacio entre las tarjetas */
+}
+
+.objetivo{
+    background: #1e293b; /* fondo oscuro para cada tarjeta */
+    border: 1px solid rgba(255,255,255,.06); /* borde sutil para delimitar la tarjeta */
+    border-radius: 16px; /* bordes redondeados */
+    padding: 32px 26px; /* espacio interior alrededor del contenido */
+    position: relative; /* permite posicionar elementos absolutos */
+    overflow: hidden; /* oculta contenido que sobresale */
+    transition: .35s ease; /* transición suave para hover */
+}
+
+.objetivo::before{
+    content: ''; /* barra decorativa superior */
+    position: absolute; /* posicionado respecto a la tarjeta */
+    top: 0;
+    left: 0;
+    width: 100%; /* cubre todo el ancho de la tarjeta */
+    height: 3px; /* altura de la barra */
+    background: linear-gradient(90deg, #00c6ff, #0072ff); /* degradado azulado */
+    transform: scaleX(0); /* empieza escondida en horizontal */
+    transform-origin: left; /* la animación inicia desde la izquierda */
+    transition: transform .35s ease; /* transición para la animación */
+}
+
+.objetivo:hover{
+    transform: translateY(-8px); /* eleva la tarjeta al pasar el ratón */
+    border-color: rgba(0,198,255,.35); /* cambia el borde al hover */
+    box-shadow: 0 20px 40px rgba(0,114,255,.15); /* agrega sombra de profundidad */
+}
+
+.objetivo:hover::before{
+    transform: scaleX(1); /* muestra la barra decorativa en hover */
+}
+
+.objetivo h3{
+    display: inline-flex; /* usa inline-flex para centrar el número */
+    align-items: center; /* centra verticalmente el contenido */
+    justify-content: center; /* centra horizontalmente el contenido */
+    width: 40px; /* ancho del círculo del número */
+    height: 40px; /* alto del círculo del número */
+    border-radius: 50%; /* forma circular */
+    background: rgba(0,198,255,.1); /* fondo azul tenue */
+    color: #00c6ff; /* color del número */
+    font-size: .95rem; /* tamaño de fuente para el número */
+    font-weight: 800; /* número en negrita */
+    margin-bottom: 18px; /* espacio debajo del círculo */
+}
+
+.objetivo p{
+    color: #d1d5db; /* color claro para el texto del objetivo */
+    font-size: .95rem; /* tamaño de fuente legible */
+    line-height: 1.7; /* espacio entre líneas cómodo */
+}
+
+/* Numerar automáticamente en vez de "Objetivo 1", "Objetivo 2"... */
+.objetivo h3{
+    font-size: 0; /* oculta el contenido del h3 y usa solo el contador */
+}
+
+.objetivo h3::before{
+    counter-increment: objetivo-num; /* aumenta el contador para cada objetivo */
+    content: counter(objetivo-num); /* muestra el número automático */
+    font-size: 1rem; /* tamaño de fuente del número */
+}
+
+.objetivos-lista{
+    counter-reset: objetivo-num; /* inicia el contador de objetivos */
+}
+
+/* RESPONSIVE */
+@media(max-width: 950px){
+    .objetivos-lista{
+        grid-template-columns: repeat(2, 1fr); /* dos columnas para pantallas medianas */
+    }
+}
+
+@media(max-width: 600px){
+    .objetivos-lista{
+        grid-template-columns: 1fr; /* una columna en pantallas pequeñas */
+    }
+}

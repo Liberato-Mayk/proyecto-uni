@@ -1,0 +1,40 @@
+/*=========================
+        RESULTADO
+=========================*/
+
+.resultado{
+    padding: 90px 0;
+    background: #a09e97;
+    text-align: center;
+}
+
+.resultado .contenedor{
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.resultado h2{
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #0a2f5a;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.resultado h2::after{
+    content: '';
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    margin: 14px auto 0;
+    border-radius: 2px;
+}
+
+.resultado p{
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.85;
+}
