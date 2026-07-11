@@ -1,175 +1,299 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>TGR CURSOS</title>
+
     <link rel="icon" href="img/logo.png" type="image/png">
-    <link rel="stylesheet" href="inicio.css">
-    <link rel="stylesheet" href="navegador.css">
-    <link rel="stylesheet" href="cursos.css ">
+
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/navegador.css">
+    <link rel="stylesheet" href="css/cursos.css">
+    <link rel="stylesheet" href="css/videos.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/nosotros.css">
 </head>
+
 <body>
+
     <header>
         <div class="header-container">
+
             <div class="logo">
                 <a href="">
-                    <img src="img/logo.png" alt="logo de la pagina">
+                    <img src="img/logo.png" alt="Logo">
                 </a>
                 <h2>TGR CURSOS</h2>
             </div>
+
             <div class="nav">
                 <a href="#">Inicio</a>
                 <a href="#">Cursos</a>
                 <a href="#">Sobre nosotros</a>
             </div>
+
         </div>
     </header>
 
     <main>
+
+        <!-- ================= HERO ================= -->
+
         <section>
             <div class="contenedor">
-                <div class="inicio">
-                    <h1>Tu Plataforma de <br> Aprendizaje Tecnológico</h1>
-                    <p>Centralizamos los mejores cursos gratuitos de tecnología para que desarrolles habilidades en programación, análisis de datos y herramientas digitales desde un solo lugar.</p>
+                <div class="inicio" id="inicio">
+                    <h1>
+                        Tu Plataforma de <br>
+                        Aprendizaje Tecnológico
+                    </h1>
+
+                    <p>
+                        Centralizamos los mejores cursos gratuitos de tecnología
+                        para que desarrolles habilidades en programación,
+                        análisis de datos y herramientas digitales desde un solo lugar.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <section>
+<!-- ================= SOBRE NOSOTROS ================= -->
+        <section class="sobre-nosotros" id="sobre-nosotros">
             <div class="contenedor">
-                <div class="cursos">
-                    <h2>Nuestros Cursos</h2>
-                    <p>Selecciona el área que quieres empezar a aprender.</p>
+                <div class="sn-header">
+                    <h2>Sobre Nosotros</h2>
+                    <p>
+                        Conoce quiénes somos y por qué creamos esta plataforma.
+                    </p>
+                </div>
+                <div class="sn-grid">
+                    <div class="sn-texto">
+                        <h3>Nuestra Misión</h3>
+                        <p>
+                            En TGR Cursos creemos que el conocimiento tecnológico
+                            no debería tener barreras. Por eso centralizamos los
+                            mejores cursos gratuitos de programación, análisis de
+                            datos y herramientas digitales que existen en internet,
+                            para que cualquier persona pueda aprender desde un
+                            solo lugar, sin perder tiempo buscando en decenas de canales.
+                        </p>
+
+                        <h3>¿Por qué TGR Cursos?</h3>
+                        <p>
+                            No creamos el contenido, lo organizamos. Filtramos y
+                            seleccionamos cursos de calidad, dictados por creadores
+                            reconocidos de la comunidad hispanohablante, para que tu
+                            único trabajo sea aprender.
+                        </p>
+                    </div>
+
+                    <div class="sn-stats">
+                        <div class="stat-card">
+                            <h4>+20</h4>
+                            <p>Tecnologías disponibles</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>100%</h4>
+                            <p>Cursos gratuitos</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>+5</h4>
+                            <p>Creadores de contenido</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>24/7</h4>
+                            <p>Acceso libre</p>
+                        </div>
+                    </div>
+
                 </div>
 
-                <!-- Grilla de tecnologías -->
+            </div>
+        </section>
+
+        <!-- ================= TECNOLOGÍAS ================= -->
+
+        <section>
+            <div class="contenedor">
+                <div class="cursos" id="cursos">
+                    <h2>Nuestros Cursos</h2>
+                    <p>
+                        Selecciona el área que quieres empezar a aprender.
+                    </p>
+                </div>
                 <div class="tech-grid">
                     <div class="tech-container">
-                        <button class="tech-item">
+
+                        <button class="tech-item" data-tech="python">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
                             Python
                         </button>
 
-                        <button class="tech-item">
+                        <button class="tech-item" data-tech="javascript">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
                             JavaScript
                         </button>
 
-                        <button class="tech-item">
+                        <button class="tech-item" data-tech="typescript">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg">
                             TypeScript
                         </button>
 
-                        <button class="tech-item">
+                        <button class="tech-item" data-tech="java">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg">
                             Java
                         </button>
 
-                        <button class="tech-item">
+                        <button class="tech-item" data-tech="c#">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg">
+                            C#
+                        </button>
+
+                        <button class="tech-item" data-tech="c++">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg">
                             C++
                         </button>
 
-                        <button class="tech-item">
+                        <button class="tech-item" data-tech="html">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
                             HTML
                         </button>
 
-                        <button class="tech-item">
+                        <button class="tech-item" data-tech="css">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
                             CSS
                         </button>
 
-                        <button class="tech-item">
+                        <button class="tech-item" data-tech="react">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
                             React
                         </button>
 
-                        <button class="tech-item">
+                        <button class="tech-item" data-tech="nodejs">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
                             Node.js
                         </button>
 
-                        <button class="tech-item">
+                        <button class="tech-item" data-tech="express">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg">
                             Express
                         </button>
 
-                        <button class="tech-item">
+                        <button class="tech-item" data-tech="postgresql">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg">
                             PostgreSQL
                         </button>
 
-                        <button class="tech-item">
+                        <button class="tech-item" data-tech="mysql">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
                             MySQL
                         </button>
 
-                        <button class="tech-item">
+                        <button class="tech-item" data-tech="mongodb">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg">
                             MongoDB
                         </button>
 
-                        <button class="tech-item">
+                        <button class="tech-item" data-tech="fastapi">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg">
                             FastAPI
                         </button>
 
-                        <button class="tech-item">
+                        <button class="tech-item" data-tech="django">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg">
                             Django
                         </button>
 
-                        <button class="tech-item">
+                        <button class="tech-item" data-tech="flask">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg">
                             Flask
                         </button>
 
-                        <button class="tech-item">
+                        <button class="tech-item" data-tech="pandas">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg">
                             Pandas
                         </button>
 
-                        <button class="tech-item">
+                        <button class="tech-item" data-tech="numpy">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg">
                             NumPy
                         </button>
 
-                        <button class="tech-item">
+                        <button class="tech-item" data-tech="git">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
                             Git
                         </button>
 
-                        <button class="tech-item">
+                        <button class="tech-item" data-tech="github">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
                             GitHub
                         </button>
 
-                        <button class="tech-item">
+                        <button class="tech-item" data-tech="vscode">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg">
                             VS Code
                         </button>
 
-                        <button class="tech-item">
+                        <button class="tech-item" data-tech="docker">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
                             Docker
                         </button>
                     </div>
                 </div>
-
-                <!-- Aquí se inyectan las cards dinámicamente -->
-                <div class="cursos-resultado" id="cursosResultado"></div>
             </div>
         </section>
 
-        <section>
+        <!-- ================= CURSOS ================= -->
+        <section class="lista-cursos">
             <div class="contenedor">
-
+                <h2>Cursos Disponibles</h2>
+                <p>
+                    Selecciona una o varias tecnologías para filtrar los cursos.
+                </p>
+                <div class="cursos-grid" id="cursosResultado">
+                </div>
             </div>
         </section>
 
+        <footer class="footer">
+            <div class="footer-container">
+
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="Logo">
+                    <h2>TGR CURSOS</h2>
+                    <p>Tu plataforma de aprendizaje tecnológico, 100% gratuita.</p>
+                </div>
+
+                <div class="footer-nav">
+                    <h3>Navegación</h3>
+                    <a href="#inicio">Inicio</a>
+                    <a href="#cursos">Cursos</a>
+                    <a href="#sobre-nosotros">Sobre nosotros</a>
+                </div>
+
+                <div class="footer-social">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="#" target="_blank" aria-label="facebook">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook">
+                        </a>
+                        <a href="#" target="_blank" aria-label="YouTube">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/youtube/youtube-original.svg" alt="YouTube">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 TGR CURSOS. Todos los derechos reservados.</p>
+            </div>
+        </footer>
     </main>
     <script src="cursos.js"></script>
+
 </body>
+
 </html>

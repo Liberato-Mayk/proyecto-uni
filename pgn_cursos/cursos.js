@@ -1,59 +1,96 @@
-const cursosPorTech = {
-    python: [
-        {
-            titulo: "Python desde Cero",
-            descripcion: "Aprende los fundamentos de Python paso a paso.",
-            canal: "Canal Ejemplo",
-            youtubeId: "ID_DEL_VIDEO"
-        },
-        // más cursos...
-    ],
-    sql: [
-        {
-            titulo: "SQL para principiantes",
-            descripcion: "Consultas, joins y bases de datos relacionales.",
-            canal: "Canal Ejemplo",
-            youtubeId: "ID_DEL_VIDEO"
-        }
-    ],
-    // fastapi, postgres, html, js...
-};
+const cursos = [
 
-const botones = document.querySelectorAll('.tech-item');
-const resultado = document.getElementById('cursosResultado');
+{
+    tech:"python",
+    titulo:"Python desde Cero",
+    canal:"Soy Dalto",
+    youtube:"https://www.youtube.com/watch?v=nKPbfIU442g"
+},
 
-botones.forEach(btn => {
-    btn.addEventListener('click', () => {
-        botones.forEach(b => b.classList.remove('activo'));
-        btn.classList.add('activo');
+{
+    tech:"python",
+    titulo:"Curso Completo de Python",
+    canal:"MoureDev by Brais Moure",
+    youtube:"https://www.youtube.com/watch?v=Kp4Mvapo5kc&list=PLNdFk2_brsRdgQXLIlKBXQDeRf3qvXVU_"
+},
 
-        const tech = btn.dataset.tech;
-        mostrarCursos(cursosPorTech[tech] || []);
-    });
-});
+{
+    tech:"c#",
+    titulo:"C# desde Cero",
+    canal:"MoureDev by Brais Moure",
+    youtube:"https://www.youtube.com/watch?v=L-f8u0hwi4Y"
+},
 
-function mostrarCursos(cursos) {
-    resultado.innerHTML = '';
+{
+    tech:"c++",
+    titulo:"C++ desde Cero",
+    canal:"Programación ATS",
+    youtube:"https://www.youtube.com/watch?v=jS6wb263CIM"
+},
 
-    if (cursos.length === 0) {
-        resultado.innerHTML = '<p>Próximamente cursos para esta tecnología.</p>';
-        return;
-    }
+{
+    tech:"html",
+    titulo:"HTML Completo",
+    canal:"MoureDev by Brais Moure",
+    youtube:"https://www.youtube.com/watch?v=MJkdaVFHrto"
+}
 
-    cursos.forEach(curso => {
-        const card = document.createElement('div');
-        card.classList.add('curso-card');
-        card.innerHTML = `
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/${curso.youtubeId}" 
-                    allowfullscreen></iframe>
-            </div>
-            <div class="info">
+];
+
+// BOTONES
+
+const botones=document.querySelectorAll(".tech-item");
+const contenedor=document.getElementById("cursosResultado");
+let filtros=[];
+
+// EXTRAER MINIATURA
+function obtenerMiniatura(url){
+    const id=url.split("v=")[1].split("&")[0];
+    return `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+}
+
+// MOSTRAR CURSOS
+function mostrarCursos(lista){
+    contenedor.innerHTML="";
+    lista.forEach(curso=>{
+        contenedor.innerHTML+=`
+        <div class="curso-card">
+            <img src="${obtenerMiniatura(curso.youtube)}">
+            <div class="curso-info">
                 <h3>${curso.titulo}</h3>
-                <p>${curso.descripcion}</p>
-                <span class="canal">📺 ${curso.canal}</span>
+                <p>${curso.canal}</p>
+                <a href="${curso.youtube}"
+                target="_blank">
+                    Ver Curso
+                </a>
             </div>
+        </div>
         `;
-        resultado.appendChild(card);
     });
 }
+
+
+// INICIO
+mostrarCursos(cursos);
+
+// FILTROS
+botones.forEach(boton=>{
+    boton.addEventListener("click",()=>{
+        const tech=boton.dataset.tech;
+        boton.classList.toggle("activo");
+        if(filtros.includes(tech)){
+            filtros=filtros.filter(t=>t!==tech);
+        }
+        else{
+            filtros.push(tech);
+        }
+        if(filtros.length==0){
+            mostrarCursos(cursos);
+            return;
+        }
+        const resultado=cursos.filter(curso=>{
+            return filtros.includes(curso.tech);
+        });
+        mostrarCursos(resultado);
+    });
+});

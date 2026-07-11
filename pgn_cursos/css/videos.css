@@ -1,0 +1,162 @@
+/*=========================
+        LISTA DE CURSOS
+=========================*/
+
+.lista-cursos{
+    padding: 80px 0;
+    background: #f7f9fc;
+}
+
+.lista-cursos h2{
+    text-align: center;
+    font-size: 2.5rem;
+    color: #1d2140;
+    margin-bottom: 15px;
+}
+
+.lista-cursos p{
+    text-align: center;
+    color: #666;
+    margin-bottom: 45px;
+    font-size: 1.05rem;
+}
+
+/*=========================
+        GRID
+=========================*/
+
+.cursos-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+/*=========================
+        CARD
+=========================*/
+
+.curso-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+
+.curso-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 35px rgba(0,0,0,.15);
+}
+
+/*=========================
+      IMAGEN
+=========================*/
+
+.curso-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    display:block;
+}
+/*=========================
+      CONTENIDO
+=========================*/
+.curso-info{
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+.curso-info h3{
+    font-size:1.25rem;
+    color:#1d2140;
+    margin-bottom:10px;
+}
+
+.curso-info p{
+    color:#666;
+    margin-bottom:22px;
+    font-size:.95rem;
+    text-align:left;
+    flex:1;
+}
+
+/*=========================
+      BOTON
+=========================*/
+
+.curso-info a{
+    display:inline-block;
+    width:100%;
+    box-sizing:border-box;
+    text-align:center;
+    text-decoration:none;
+    background:#4b2be3;
+    color:#fff;
+    padding:12px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.curso-info a:hover{
+
+    background:#2e0fd4;
+
+}
+
+/*=========================
+      BOTON ACTIVO
+=========================*/
+
+.tech-item.activo{
+    background:#4b2be3;
+    color:white;
+    border-color:#4b2be3;
+    transform:scale(1.05);
+}
+
+.tech-item.activo img{
+
+    filter:none;
+
+}
+
+/*=========================
+      RESPONSIVE
+=========================*/
+
+@media(max-width:1200px){
+
+.cursos-grid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+@media(max-width:850px){
+
+.cursos-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:550px){
+
+.cursos-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
