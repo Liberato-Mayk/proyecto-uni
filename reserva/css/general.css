@@ -1,0 +1,100 @@
+/* ======================================================
+   ARCHIVO: general.css
+   AQUI VAN LOS ESTILOS GENERALES DE TODA LA PAGINA
+   (reset, colores, fuentes, botones, contenedor)
+   ====================================================== */
+
+/* variables: aqui guardamos los colores y fuentes para no repetirlos en todo el css */
+:root {
+    --color-fondo: #0a0a0a;         /* color de fondo oscuro que se usa en casi toda la pagina */
+    --color-dorado: #d4af37;        /* color dorado que se usa en titulos pequeños, numeros y botones */
+    --color-blanco: #ffffff;        /* color blanco para los titulos grandes */
+    --color-texto-gris: #b3b3b3;    /* color gris para los parrafos y descripciones */
+    --fuente-titulos: 'Playfair Display', serif;  /* fuente para los titulos grandes (estilo elegante) */
+    --fuente-texto: 'Poppins', sans-serif;        /* fuente para el texto normal */
+}
+
+/* reset: quitamos los margenes y rellenos que trae el navegador por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* hace que el padding no aumente el tamaño total del elemento */
+}
+
+/* estilo base del body, aplica a toda la pagina */
+body {
+    background-color: var(--color-fondo);
+    font-family: var(--fuente-texto);
+    color: var(--color-blanco);
+    line-height: 1.6; /* separacion entre lineas de texto para que se lea mejor */
+}
+
+/* quitamos el subrayado y el color azul por defecto de los links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* las imagenes no deben salirse de su contenedor */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* contenedor general: centra el contenido y le da un ancho maximo */
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* centra el contenedor en la pagina */
+}
+
+/* estilo base para todos los botones de la pagina */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s; /* efecto suave al pasar el mouse */
+}
+
+/* boton principal: fondo dorado (ej: "Ver hoteles") */
+.btn-primary {
+    background-color: var(--color-dorado);
+    color: #1a1a1a;
+    border: 2px solid var(--color-dorado);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--color-dorado);
+}
+
+/* boton secundario: solo con borde, sin relleno (ej: "Hacer reserva") */
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-blanco);
+    border: 2px solid var(--color-blanco);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-blanco);
+    color: #1a1a1a;
+}
+
+/* etiqueta pequeña dorada que aparece arriba de los titulos (ej: "SOBRE NOSOTROS") */
+.etiqueta {
+    color: var(--color-dorado);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px; /* separacion entre letras para dar estilo elegante */
+    text-transform: uppercase;
+}
+
+/* titulo grande que se repite en varias secciones */
+.titulo-texto {
+    font-family: var(--fuente-titulos);
+    font-size: 40px;
+    margin: 15px 0 20px 0;
+}

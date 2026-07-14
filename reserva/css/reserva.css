@@ -1,0 +1,171 @@
+/* ======================================================
+   ARCHIVO: reserva.css
+   AQUI VAN LOS ESTILOS DE LA SECCION "RESERVA" (formulario)
+   ====================================================== */
+
+/* separacion arriba y abajo de la seccion */
+.reserva {
+    padding: 100px 0;
+}
+
+/* el contenido se divide en 2 columnas: info a la izquierda y formulario a la derecha */
+.cont-reserva {
+    display: flex;
+    gap: 60px;
+}
+
+/* columna izquierda: texto informativo */
+.reserva-info {
+    flex: 1;
+}
+
+.reserva-info p {
+    color: var(--color-texto-gris);
+    margin: 15px 0 25px 0;
+}
+
+/* lista de garantias (confirmacion inmediata, cancelacion gratuita, etc) */
+.garantias {
+    list-style: none; /* quitamos los puntos de la lista */
+    margin-bottom: 35px;
+}
+
+.garantias li {
+    color: var(--color-texto-gris);
+    margin-bottom: 12px;
+}
+
+/* bloque de contacto (telefono y correo) */
+.contacto p {
+    color: var(--color-texto-gris);
+    margin-bottom: 10px;
+}
+
+/* los links de telefono y correo se muestran uno debajo del otro */
+.contacto a {
+    display: block;
+    color: var(--color-blanco);
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+.contacto a:hover {
+    color: var(--color-dorado);
+}
+
+/* columna derecha: formulario, con fondo propio para diferenciarlo */
+.formulario-reserva {
+    flex: 1;
+    background-color: #141414;
+    border: 1px solid #262626;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+/* cada fila del formulario: 2 campos uno al lado del otro */
+.linea-formulario {
+    display: flex;
+    gap: 20px;
+}
+
+/* cada grupo individual de campo (label + input) */
+.form-grupo {
+    flex: 1; /* para que los 2 campos de una linea ocupen el mismo espacio */
+    margin-bottom: 20px;
+}
+
+/* etiqueta de cada campo (ej: "Nombre completo *") */
+.form-grupo label {
+    display: block;
+    font-size: 13px;
+    color: var(--color-texto-gris);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+/* estilo comun para los campos de texto, select y textarea */
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
+    width: 100%;
+    background-color: #0a0a0a;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    padding: 12px 14px;
+    color: var(--color-blanco);
+    font-family: var(--fuente-texto);
+    font-size: 14px;
+}
+
+/* el textarea no se puede estirar horizontalmente, solo verticalmente */
+.form-grupo textarea {
+    resize: vertical;
+}
+
+/* borde dorado cuando el usuario hace clic en un campo */
+.form-grupo input:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus {
+    outline: none;
+    border-color: var(--color-dorado);
+}
+
+/* mensaje de error debajo de un campo (se llena con javascript) */
+.form-error {
+    display: block;
+    color: #e05252;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* boton que ocupa todo el ancho del formulario */
+.btn-full {
+    width: 100%;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* mensaje de exito que aparece cuando se envia el formulario */
+.form-suceso {
+    background-color: rgba(46, 204, 113, 0.1);
+    border: 1px solid #2ecc71;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-suceso p {
+    color: var(--color-texto-gris);
+    margin-top: 8px;
+}
+
+.success-icon {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* mensaje de error general que aparece si algo falla al enviar (reemplaza el alert() feo) */
+.form-error-general {
+    background-color: rgba(224, 82, 82, 0.1);
+    border: 1px solid #e05252;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-error-general p {
+    color: var(--color-texto-gris);
+    margin-top: 8px;
+}
+
+/* icono de error, mismo estilo que el icono de exito pero para errores */
+.error-icon {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 8px;
+}

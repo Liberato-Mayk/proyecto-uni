@@ -2,39 +2,39 @@
         RESULTADO
 =========================*/
 
-.resultado{
-    padding: 90px 0;
-    background: #a09e97;
-    text-align: center;
+.resultado{ /* Estilo principal de la sección de resultados */
+    padding: 90px 0; /* Espacio vertical interno grande */
+    background: #c9d0dc; /* Color de fondo gris beige */
+    text-align: center; /* Centra el contenido horizontalmente */
 }
 
-.resultado .contenedor{
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 0 20px;
+.resultado .contenedor{ /* Ajusta el ancho y el espacio del contenedor */
+    max-width: 850px; /* Limita el ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    padding: 0 20px; /* Añade espacio lateral interno */
 }
 
-.resultado h2{
-    font-size: 2.4rem;
-    font-weight: 800;
-    color: #0a2f5a;
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
+.resultado h2{ /* Estilo del título de la sección */
+    font-size: 2.4rem; /* Tamaño grande del título */
+    font-weight: 800; /* Hace el texto muy grueso */
+    color: #0a2f5a; /* Color azul oscuro */
+    margin-bottom: 20px; /* Separa el título del texto siguiente */
+    position: relative; /* Permite posicionar elementos adicionales */
+    display: inline-block; /* Ajusta el ancho al contenido del título */
 }
 
-.resultado h2::after{
-    content: '';
-    display: block;
-    width: 70px;
-    height: 3px;
-    background: linear-gradient(90deg, #00c6ff, #0072ff);
-    margin: 14px auto 0;
-    border-radius: 2px;
+.resultado h2::after{ /* Línea decorativa debajo del título */
+    content: ''; /* Necesario para crear el pseudo-elemento */
+    display: block; /* Se muestra como bloque */
+    width: 70px; /* Ancho de la línea */
+    height: 3px; /* Alto de la línea */
+    background: linear-gradient(90deg, #00c6ff, #0072ff); /* Degradado azul */
+    margin: 14px auto 0; /* Centra la línea y deja espacio superior */
+    border-radius: 2px; /* Redondea un poco los bordes */
 }
 
-.resultado p{
-    color: #555;
-    font-size: 1.1rem;
-    line-height: 1.85;
+.resultado p{ /* Estilo del párrafo descriptivo */
+    color: #555; /* Color gris oscuro del texto */
+    font-size: 1.1rem; /* Tamaño de letra ligeramente grande */
+    line-height: 1.85; /* Espaciado entre líneas cómodo */
 }

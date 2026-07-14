@@ -1,0 +1,140 @@
+/* ======================================================
+   ARCHIVO: hoteles.css
+   AQUI VAN LOS ESTILOS DE LA SECCION "HOTELES"
+   ====================================================== */
+
+/* separacion arriba y abajo de la seccion */
+.hoteles {
+    padding: 100px 0;
+}
+
+/* cuadricula de las tarjetas: 2 columnas que pasan a 1 en pantallas chicas */
+.hoteles-grid {
+    display: flex;
+    flex-wrap: wrap; /* si no caben 2 tarjetas por fila, bajan de linea */
+    gap: 30px;
+}
+
+/* cada tarjeta de hotel */
+.hotel-card {
+    background-color: #141414;
+    border: 1px solid #262626;
+    border-radius: 10px;
+    overflow: hidden; /* para que la imagen no se salga de los bordes redondeados */
+
+    /* con esto entran 2 tarjetas por fila, restando el espacio del gap */
+    flex: 1 1 calc(50% - 30px);
+}
+
+/* contenedor de la imagen de cada hotel, relativo para poder poner la etiqueta encima */
+.hotel-card .cont-img {
+    position: relative;
+}
+
+/* imagen del hotel */
+.hotel-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover; /* la imagen se recorta pero mantiene su proporcion */
+}
+
+/* etiqueta (ej: "Montaña", "Destacado") que va arriba a la izquierda de la imagen */
+.hotel-nombre {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--color-dorado);
+    color: var(--color-dorado);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+/* contenedor del texto de cada tarjeta, con espacio interno */
+.hotel-card .cont-text {
+    padding: 30px;
+}
+
+/* estrellas de calificacion */
+.calificacion {
+    color: var(--color-dorado);
+    margin-bottom: 10px;
+}
+
+/* titulo del hotel */
+.hotel-card h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+/* ubicacion del hotel (ej: Bariloche, Argentina) */
+.localizacion {
+    color: var(--color-texto-gris);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* descripcion larga del hotel */
+.hotel-desc {
+    color: var(--color-texto-gris);
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+/* lista de atributos/servicios del hotel (spa, helipuerto, etc) */
+.atributos {
+    list-style: none; /* quitamos los puntos por defecto de la lista */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px; /* espacio entre filas y entre columnas */
+    margin-bottom: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #262626; /* linea que separa la descripcion de los atributos */
+}
+
+.atributos li {
+    color: var(--color-texto-gris);
+    font-size: 14px;
+    flex: 1 1 40%; /* 2 atributos por fila */
+}
+
+/* fila final con el precio y el boton de reservar */
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* contenedor del precio, en columna (palabra "Desde" arriba del monto) */
+.precio {
+    display: flex;
+    flex-direction: column;
+}
+
+.desde {
+    color: var(--color-texto-gris);
+    font-size: 13px;
+}
+
+/* monto del precio, grande y dorado */
+.monto {
+    color: var(--color-dorado);
+    font-family: var(--fuente-titulos);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.noche {
+    color: var(--color-texto-gris);
+    font-size: 13px;
+}
+
+/* boton mas pequeño que el boton normal, usado dentro de las tarjetas */
+.btn-sm {
+    padding: 10px 22px;
+}

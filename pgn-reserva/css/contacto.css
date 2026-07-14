@@ -1,0 +1,194 @@
+/*CONTACTO*/
+
+.contacto{ /* Sección principal del formulario de contacto */
+    padding: 10px 0; /* Espacio superior e inferior */
+    background: #f5f9ff; /* Fondo claro azul */
+}
+
+.personalisado{ /* Contenedor principal del formulario con estilo de tarjeta */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 950px; /* Limita el ancho máximo */
+    margin: auto; /* Centra el contenedor */
+    background: #fff; /* Fondo blanco */
+    padding: 45px; /* Espaciado interno */
+    border-radius: 18px; /* Bordes redondeados */
+    box-shadow: 0 15px 35px rgba(0,0,0,.25); /* Sombra pronunciada */
+}
+
+.personalisado h3{ /* Título del formulario */
+    text-align: center; /* Centra el texto */
+    font-size: 2.5rem; /* Tamaño grande del título */
+    color: #0a2f5a; /* Color azul oscuro */
+    margin-bottom: 15px; /* Espacio inferior */
+}
+
+.personalisado>p{ /* Texto introductorio del formulario */
+    text-align: center; /* Centra el párrafo */
+    color: #666; /* Color gris del texto */
+    line-height: 1.7; /* Altura de línea cómoda */
+    margin-bottom: 40px; /* Espacio inferior */
+}
+
+/*FORMULARIO*/
+
+.personalisado form{ /* Distribución del formulario en dos columnas */
+    display: grid; /* Usa layout de cuadrícula */
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 20px; /* Espacio entre campos */
+}
+
+/* Campos que ocupan toda la fila */
+
+.personalisado textarea,
+.personalisado button,
+.personalisado input[type=file],
+.personalisado select[name=tiempo]{ /* Elementos que deben ocupar ambas columnas */
+    grid-column: 1/3; /* Se expanden a todo el ancho del formulario */
+}
+
+/* Etiquetas */
+
+.personalisado label{ /* Estilo general de las etiquetas */
+    display: block; /* Se muestran en bloque */
+    margin-bottom: 8px; /* Espacio inferior */
+    font-weight: 600; /* Texto seminegro */
+    color: #333; /* Color gris oscuro */
+}
+
+/* Inputs */
+
+.personalisado input,
+.personalisado select,
+.personalisado textarea{ /* Estilo compartido de los campos del formulario */
+    width: 100%; /* Ocupan todo el ancho disponible */
+    padding: 13px 15px; /* Espaciado interno */
+    border: 1px solid #d9d9d9; /* Borde gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 15px; /* Tamaño de texto */
+    outline: none; /* Quita el contorno por defecto */
+    transition: .3s; /* Transición suave */
+    background: #fafafa; /* Fondo limpio */
+}
+
+.personalisado input:focus,
+.personalisado select:focus,
+.personalisado textarea:focus{ /* Efecto al enfocar un campo */
+    border-color: #00bfff; /* Borde azul */
+    box-shadow: 0 0 8px rgba(0,191,255,.3); /* Sombra azul suave */
+    background: #fff; /* Fondo blanco */
+}
+
+.personalisado textarea{ /* Área de texto grande */
+    resize: vertical; /* Permite ajustar solo la altura */
+    min-height: 130px; /* Altura mínima */
+}
+
+/*CHECKBOX*/
+.personalisado input[type=checkbox]{ /* Estilo de los checkboxes del formulario */
+    width: auto; /* Ajusta el ancho al contenido */
+    margin-right: 8px; /* Espacio a la derecha */
+}
+
+.personalisado label:has(input[type=checkbox]){ /* Etiquetas que contienen checkbox */
+    display: flex; /* Alinea texto y checkbox */
+    align-items: center; /* Centra verticalmente */
+    font-weight: normal; /* Quita el énfasis del texto */
+    margin-bottom: 8px; /* Espacio inferior */
+}
+
+/*BOTÓN*/
+.btnEnviar{ /* Botón principal de envío */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 15px; /* Espaciado interno */
+    background: linear-gradient(135deg,#00bfff,#0066ff); /* Fondo azul degradado */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 17px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Cambia el cursor a mano */
+    transition: .3s; /* Transición suave */
+}
+
+.btnEnviar:hover{ /* Efecto al pasar el mouse */
+    transform: translateY(-3px); /* Sube ligeramente */
+    box-shadow: 0 8px 20px rgba(0,191,255,.35); /* Sombra azul */
+}
+
+.campo{ /* Contenedor de cada campo del formulario */
+    display:flex; /* Usa flexbox */
+    flex-direction:column; /* Organiza los elementos en columna */
+}
+
+.campo-completo{ /* Campo que ocupa ambas columnas */
+    grid-column:1 / 3; /* Se extiende a todo el ancho */
+}
+
+.checks{ /* Grupo de opciones tipo checkbox */
+    display:grid; /* Usa distribución en cuadrícula */
+    grid-template-columns:repeat(2,1fr); /* Dos columnas iguales */
+    gap:12px 30px; /* Espacio entre filas y columnas */
+    margin-top:10px; /* Separación superior */
+}
+
+.checks label{ /* Etiquetas de cada opción */
+    display:flex; /* Alinea checkbox y texto */
+    align-items:center; /* Centra verticalmente */
+    gap:10px; /* Espacio entre ambos */
+    cursor:pointer; /* Cambia el cursor */
+    font-weight:500; /* Peso medio */
+}
+
+.checks input{ /* Tamaño de los checkboxes del grupo */
+    width:18px; /* Ancho */
+    height:18px; /* Alto */
+}
+
+.botones{ /* Contenedor de botones de acción */
+    display:flex; /* Usa flexbox */
+    gap:20px; /* Espacio entre botones */
+}
+
+.btnEnviar,
+.btnLimpiar{ /* Estilo compartido de botones */
+    flex:1; /* Ambos ocupan espacio igual */
+    padding:15px; /* Espaciado interno */
+    border:none; /* Sin borde */
+    border-radius:10px; /* Bordes redondeados */
+    cursor:pointer; /* Cursor tipo mano */
+    font-size:16px; /* Tamaño del texto */
+    transition:.3s; /* Transición suave */
+}
+
+.btnEnviar{ /* Botón principal de envío */
+    background:#0077ff; /* Fondo azul */
+    color:#fff; /* Texto blanco */
+}
+
+.btnEnviar:hover{ /* Hover del botón de envío */
+    background:#005fd1; /* Fondo azul oscuro */
+}
+
+.btnLimpiar{ /* Botón para limpiar el formulario */
+    background:#ececec; /* Fondo gris claro */
+}
+
+.btnLimpiar:hover{ /* Hover del botón de limpiar */
+    background:#d8d8d8; /* Fondo gris más oscuro */
+}
+
+/*   RESPONSIVE*/
+@media(max-width:768px){ /* Ajustes para pantallas pequeñas */
+    .personalisado{ /* Reduce el padding del contenedor */
+        padding:30px; /* Menor espacio interno */
+    }
+    .personalisado form{ /* Cambia el formulario a una sola columna */
+        display:block; /* Elimina el layout en grid */
+    }
+    .personalisado label{ /* Añade espacio superior a las etiquetas */
+        margin-top:18px; /* Separación superior */
+    }
+    .btnEnviar{ /* Agrega espacio superior al botón */
+        margin-top:20px; /* Separación superior */
+    }
+}

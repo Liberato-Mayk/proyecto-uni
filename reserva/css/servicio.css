@@ -1,0 +1,58 @@
+/* ======================================================
+   ARCHIVO: servicios.css
+   AQUI VAN LOS ESTILOS DE LA SECCION "SERVICIOS" (¿POR QUE ELEGIRNOS?)
+   ====================================================== */
+
+/* separacion arriba y abajo de la seccion */
+.servicios {
+    padding: 100px 0;
+}
+
+/* parte de arriba con el titulo y la descripcion, centrada */
+.parte-sub {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 60px auto; /* la centra y le da espacio abajo antes de las tarjetas */
+}
+
+/* descripcion debajo del titulo de la seccion */
+.section-desc {
+    color: var(--color-texto-gris);
+    margin-top: 15px;
+}
+
+/* contenedor de las tarjetas: se acomodan en fila y pasan a la siguiente linea si no caben */
+.parte-caracteristicas {
+    display: flex;
+    flex-wrap: wrap; /* permite que las tarjetas bajen de linea en pantallas pequeñas */
+    gap: 25px;
+}
+
+/* cada tarjeta individual */
+.feature-card {
+    background-color: #141414;
+    border: 1px solid #262626;
+    border-radius: 10px;
+    padding: 35px 30px;
+
+    /* con flex-basis hacemos que quepan 3 tarjetas por fila, restando el espacio del gap */
+    flex: 1 1 calc(33.333% - 25px);
+}
+
+/* icono (emoji) que va arriba de cada tarjeta */
+.feature-icon {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* titulo de cada tarjeta */
+.feature-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+/* texto descriptivo de cada tarjeta */
+.feature-card p {
+    color: var(--color-texto-gris);
+    font-size: 15px;
+}

@@ -1,0 +1,122 @@
+/* ======================================================
+   ARCHIVO: footer.css
+   AQUI VAN LOS ESTILOS DEL FOOTER (PIE DE PAGINA)
+   ====================================================== */
+
+/* el footer tiene un fondo un poco mas claro que el resto de la pagina para diferenciarlo */
+.footer {
+    background-color: #050505;
+    border-top: 1px solid #262626;
+    padding-top: 70px;
+}
+
+/* fila principal del footer: marca + 3 columnas de links, todo en fila */
+.footer-pagina {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #262626; /* linea que separa esta parte de los derechos de autor */
+}
+
+/* columna de la marca (logo + descripcion + redes sociales), mas ancha que las demas */
+.footer-marca {
+    flex: 2 1 250px;
+}
+
+/* logo dentro del footer */
+.footer-logo {
+    font-family: var(--fuente-titulos);
+    font-size: 20px;
+    color: var(--color-dorado);
+    margin-bottom: 15px;
+}
+
+.footer-marca p {
+    color: var(--color-texto-gris);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* contenedor de los iconos de redes sociales, en fila */
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+/* cada icono de red social dentro de un circulo */
+.social-links a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #141414;
+    border: 1px solid #262626;
+    border-radius: 50%; /* hace el circulo */
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    border-color: var(--color-dorado);
+}
+
+/* cada columna de links (Hoteles, Empresa, Contacto) */
+.footer-col {
+    flex: 1 1 150px;
+}
+
+/* titulo de cada columna (ej: "Hoteles", "Empresa") */
+.footer-col h4 {
+    color: var(--color-blanco);
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+/* quitamos los puntos de las listas de links */
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col li {
+    margin-bottom: 12px;
+    color: var(--color-texto-gris);
+    font-size: 14px;
+}
+
+/* links dentro de las columnas cambian a dorado al pasar el mouse */
+.footer-col a {
+    color: var(--color-texto-gris);
+    transition: 0.3s;
+}
+
+.footer-col a:hover {
+    color: var(--color-dorado);
+}
+
+/* barra inferior final: derechos de autor a la izquierda y politicas a la derecha */
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 25px 0;
+    color: var(--color-texto-gris);
+    font-size: 13px;
+}
+
+/* separacion entre los links de politica de privacidad y terminos */
+.footer-bottom div {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-bottom a {
+    color: var(--color-texto-gris);
+    transition: 0.3s;
+}
+
+.footer-bottom a:hover {
+    color: var(--color-dorado);
+}

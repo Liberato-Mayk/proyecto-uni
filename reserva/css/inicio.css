@@ -1,0 +1,56 @@
+/* ======================================================
+   ARCHIVO: inicio.css
+   AQUI VAN LOS ESTILOS DE LA SECCION "INICIO"
+   (la foto de fondo debe llamarse "inicio" dentro de la carpeta img)
+   ====================================================== */
+
+/* seccion inicio: ocupa toda la pantalla con imagen de fondo */
+.inicio {
+    /* el degradado oscuro se pone encima de la imagen para que el texto se lea bien */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('../img/inicio.jpg');
+    background-size: cover;       /* la imagen cubre toda la seccion */
+    background-position: center;  /* la imagen se centra */
+    background-repeat: no-repeat;
+
+    height: 100vh; /* ocupa el 100% del alto de la pantalla */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* pequeño titulo dorado arriba del titulo grande */
+.inicio-titulo {
+    color: var(--color-dorado);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* titulo grande principal de la portada */
+.inicio-subtitulo {
+    font-family: var(--fuente-titulos);
+    font-size: 55px;
+    max-width: 900px;
+    /* margin: arriba/abajo 0, izquierda/derecha "auto" -> esto centra la caja dentro del contenedor */
+    margin: 0 auto 25px auto;
+}
+
+/* descripcion debajo del titulo grande */
+.inicio-descripcion {
+    color: var(--color-texto-gris);
+    font-size: 18px;
+    max-width: 650px;
+    /* lo mismo aqui: sin esto, el max-width deja la caja pegada a la izquierda */
+    margin: 0 auto 35px auto;
+}
+
+/* contenedor de los dos botones, en fila con espacio entre ellos */
+.acciones {
+    display: flex;
+    gap: 20px;
+}

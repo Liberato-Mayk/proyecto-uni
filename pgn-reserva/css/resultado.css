@@ -1,0 +1,77 @@
+/*RESULTADO / VISTA DEL PROYECTO*/
+
+.proyecto-resultado{ /* Seccion final que muestra la vista previa del proyecto terminado */
+    background: #dde3ec; /* Gris azulado, un poco mas oscuro que la seccion de objetivos */
+    padding: 90px 10%; /* Espacio interno arriba/abajo y a los lados */
+    text-align: center; /* Centra el titulo, la descripcion y el boton */
+}
+
+.proyecto-resultado h2{ /* Titulo grande de la seccion */
+    color: #0a2f5a; /* Azul oscuro, igual al resto de titulos */
+    font-size: 32px; /* Tamaño grande */
+    font-weight: 700; /* Negrita */
+    margin-bottom: 10px; /* Espacio debajo */
+}
+
+.proyecto-resultado > p{ /* Parrafo descriptivo debajo del titulo */
+    color: #666; /* Gris para texto secundario */
+    margin-bottom: 45px; /* Espacio antes de los paneles */
+}
+
+.proyecto-resultado__grid{ /* Contenedor de los paneles de vista previa */
+    display: flex; /* Acomoda los paneles en fila */
+    justify-content: center; /* Centrados horizontalmente */
+    gap: 30px; /* Espacio entre paneles */
+    flex-wrap: wrap; /* En pantallas chicas bajan de linea */
+    max-width: 1100px; /* Ancho maximo del contenedor */
+    margin: 0 auto 45px auto; /* Centrado, con espacio antes del boton */
+}
+
+.proyecto-resultado__panel{ /* Cada panel individual de vista previa */
+    background: #ffffff; /* Fondo blanco */
+    border-radius: 14px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    box-shadow: 0 10px 25px rgba(10,47,90,.12); /* Sombra suave */
+    flex: 1 1 400px; /* Ocupa espacio flexible con un minimo de 400px */
+    text-align: left; /* El contenido interno se alinea a la izquierda */
+}
+
+.proyecto-resultado__panel img{ /* Captura de pantalla dentro del panel */
+    width: 100%; /* Ocupa todo el ancho del panel */
+    border-radius: 10px; /* Bordes redondeados, un poco menos que el panel */
+    margin-bottom: 16px; /* Espacio debajo, antes del texto */
+}
+
+.proyecto-resultado__panel h4{ /* Titulo dentro del panel (ej: "Vista principal") */
+    color: #0a2f5a; /* Azul oscuro */
+    font-size: 16px; /* Tamaño mediano */
+}
+
+/* boton final para ver el proyecto funcionando en vivo */
+.proyecto-resultado__btn{ /* Boton principal de la seccion */
+    display: inline-block; /* Se comporta como bloque pero mide su contenido */
+    background: linear-gradient(135deg, #00c6ff, #0072ff); /* Mismo degradado azul-cyan de la marca */
+    color: #ffffff; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: 700; /* Texto en negrita */
+    font-size: 16px; /* Tamaño del texto */
+    padding: 16px 38px; /* Espacio interno generoso */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: .3s; /* Suaviza el efecto hover */
+}
+
+.proyecto-resultado__btn:hover{ /* Efecto al pasar el mouse sobre el boton */
+    transform: translateY(-3px); /* Se levanta un poco */
+    box-shadow: 0 12px 28px rgba(0,114,255,.35); /* Sombra azul debajo */
+}
+
+/*RESPONSIVE*/
+@media (max-width: 768px){ /* Ajustes para pantallas pequeñas */
+    .proyecto-resultado{ /* Reduce el espacio lateral en movil */
+        padding: 70px 6%; /* Menos espacio a los costados */
+    }
+
+    .proyecto-resultado h2{ /* Reduce el tamaño del titulo */
+        font-size: 26px; /* Texto mas chico */
+    }
+}

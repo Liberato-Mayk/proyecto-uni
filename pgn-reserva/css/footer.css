@@ -1,0 +1,140 @@
+:root{ /* Define variables globales de colores para reutilizar en el footer */
+    --color-bg: #0f172a; /* Color oscuro de fondo general */
+    --color-card: #1e293b; /* Color de tarjetas o bloques secundarios */
+    --color-primary: #4f9cff; /* Color principal azul para énfasis */
+    --color-text: #d1d5db; /* Color claro para texto principal */
+    --color-muted: #9ca3af; /* Color gris para texto secundario */
+    --color-white: #ffffff; /* Color blanco puro */
+}
+
+/* FOOTER BASE */
+footer{  /* Estilo general del pie de página */
+    background: linear-gradient(180deg, #0f172a 0%, #020617 100%); /* Fondo oscuro con degradado */
+    color: var(--color-white); /* Color de texto blanco */
+    padding: 30px 10%; /* Espacio interno horizontal y vertical */
+    display: grid; /* Usa diseño tipo cuadrícula */
+    grid-template-columns: repeat(auto-fit,minmax(230px,1fr)); /* Columnas responsivas */
+    gap: 20px; /* Espacio entre columnas y filas */
+}
+
+/* TITULOS */
+footer h4{ /* Estilo de los subtítulos del footer */
+    font-size: 16px; /* Tamaño de letra pequeño */
+    margin-bottom: 18px; /* Espacio debajo del título */
+    color: var(--color-primary); /* Color azul destacado */
+    letter-spacing: 0.5px; /* Separación ligera entre letras */
+}
+
+/* LOGO */
+.footer-logo a{ /* Estilo del enlace del logo */
+    text-decoration: none; /* Quita el subrayado */
+    font-size: 26px; /* Tamaño grande del texto */
+    font-weight: 700; /* Hace el texto más grueso */
+    display: inline-block; /* Mantiene el tamaño del contenido */
+}
+
+.footer-logo-tech{ /* Color de la primera parte del logo */
+    color: var(--color-primary); /* Azul principal */
+}
+
+.footer-logo-forge{ /* Color de la segunda parte del logo */
+    color: var(--color-white); /* Blanco */
+}
+
+/* NAVEGACIÓN */
+.footer-nav ul{ /* Estilo de la lista de navegación */
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 0; /* Elimina el padding por defecto */
+}
+
+.footer-nav li{ /* Espacio entre cada ítem de navegación */
+    margin-bottom: 10px; /* Separación inferior */
+}
+
+.footer-nav a{ /* Estilo de los enlaces de navegación */
+    color: var(--color-text); /* Color gris claro */
+    text-decoration: none; /* Quita el subrayado */
+    position: relative; /* Necesario para la línea inferior */
+    transition: all .3s ease; /* Suaviza cambios al pasar el mouse */
+}
+
+.footer-nav a::after{ /* Línea decorativa debajo de los enlaces */
+    content: ""; /* Crea el elemento visual */
+    position: absolute; /* Posiciona sobre el enlace */
+    left: 0; /* Alinea a la izquierda */
+    bottom: -2px; /* Lo coloca justo debajo */
+    width: 0%; /* Inicialmente invisible */
+    height: 2px; /* Grosor de la línea */
+    background: var(--color-primary); /* Color azul */
+    transition: width .3s ease; /* Animación de expansión */
+}
+
+.footer-nav a:hover{ /* Cambio de color al pasar el mouse */
+    color: var(--color-white); /* Se vuelve blanco */
+}
+
+.footer-nav a:hover::after{ /* Muestra la línea al pasar el mouse */
+    width: 100%; /* La línea ocupa todo el ancho */
+}
+
+/* CONTACTO */
+.footer-contacto p{ /* Estilo de los textos de contacto */
+    margin: 10px 0; /* Espaciado vertical */
+    color: var(--color-text); /* Color claro */
+    display: flex; /* Usa flex para alinear icono y texto */
+    align-items: center; /* Centra verticalmente */
+    gap: 10px; /* Separación entre icono y texto */
+    font-size: 13px; /* Tamaño pequeño */
+}
+
+.footer-contacto i{ /* Estilo de los iconos de contacto */
+    color: var(--color-primary); /* Color azul principal */
+    font-size: 16px; /* Tamaño del icono */
+}
+
+/* REDES SOCIALES */
+.red-social a{ /* Estilo de cada icono de redes */
+    display: inline-flex; /* Permite centrar contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 42px; /* Ancho fijo */
+    height: 42px; /* Alto fijo */
+    margin-right: 8px; /* Espacio a la derecha */
+    margin-top: 8px; /* Espacio arriba */
+    border-radius: 50%; /* Forma circular */
+    background: rgba(255,255,255,0.05); /* Fondo semi-transparente */
+    backdrop-filter: blur(6px); /* Efecto de desenfoque */
+    color: var(--color-white); /* Color del icono */
+    text-decoration: none; /* Quita subrayado */
+    font-size: 18px; /* Tamaño del icono */
+    transition: all .3s ease; /* Suaviza hover */
+}
+
+.red-social a:hover{ /* Efecto al pasar el mouse sobre los iconos */
+    background: var(--color-primary); /* Cambia a color azul principal */
+    transform: translateY(-4px) scale(1.05); /* Eleva y agranda ligeramente */
+    box-shadow: 0 8px 20px rgba(79,156,255,0.3); /* Sombra azul */
+}
+
+/* COPYRIGHT */
+.footer-copy{ /* Estilo del texto de copyright */
+    grid-column: 1/-1; /* Ocupa todo el ancho de la cuadrícula */
+    margin-top: 20px; /* Espacio superior */
+    padding-top: 20px; /* Espacio interno superior */
+    border-top: 1px solid rgba(255,255,255,.1); /* Línea superior sutil */
+    text-align: center; /* Centra el texto */
+    color: var(--color-muted); /* Color gris claro */
+    font-size: 14px; /* Tamaño pequeño */
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px){ /* Ajustes para pantallas pequeñas */
+    footer{ /* Reduce el padding y espacio del footer */
+        padding: 50px 8% 20px; /* Menos espacio lateral y superior */
+        gap: 25px; /* Más separación entre bloques */
+    }
+
+    .footer-logo a{ /* Aumenta el tamaño del logo en móvil */
+        font-size: 28px; /* Texto más grande */
+    }
+}

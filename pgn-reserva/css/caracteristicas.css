@@ -1,0 +1,81 @@
+/*CARACTERISTICAS DEL PROYECTO*/
+
+.proyecto-caract{ /* Seccion de caracteristicas, fondo claro para contrastar con la portada oscura */
+    background: #f5f9ff; /* Azul muy claro, mismo tono que usaste en el formulario de contacto */
+    padding: 90px 10%; /* Espacio interno arriba/abajo y a los lados */
+}
+
+.proyecto-caract__cabecera{ /* Bloque de titulo y descripcion de la seccion */
+    text-align: center; /* Texto centrado */
+    max-width: 650px; /* Limita el ancho del texto */
+    margin: 0 auto 60px auto; /* Centra el bloque y deja espacio antes de las filas */
+}
+
+.proyecto-caract__cabecera h2{ /* Titulo grande de la seccion */
+    color: #0a2f5a; /* Azul oscuro, igual al titulo del formulario de contacto */
+    font-size: 32px; /* Tamaño grande */
+    font-weight: 700; /* Negrita */
+    margin-bottom: 14px; /* Espacio debajo */
+}
+
+.proyecto-caract__cabecera p{ /* Parrafo descriptivo debajo del titulo */
+    color: #666; /* Gris, igual al texto del formulario de contacto */
+    line-height: 1.7; /* Espaciado comodo */
+}
+
+.proyecto-caract__fila{ /* Cada fila individual: una imagen y un bloque de texto */
+    max-width: 1200px; /* Ancho maximo de la fila */
+    margin: 0 auto 70px auto; /* Centrada, con espacio antes de la siguiente fila */
+    display: flex; /* Acomoda imagen y texto en fila */
+    align-items: center; /* Centra verticalmente */
+    gap: 55px; /* Espacio entre la imagen y el texto */
+    flex-wrap: wrap; /* En pantallas chicas se acomodan en columna */
+}
+
+.proyecto-caract__fila:last-child{ /* La ultima fila no necesita espacio extra debajo */
+    margin-bottom: 0; /* Sin margen inferior */
+}
+
+/* esta clase se agrega a las filas donde la imagen debe ir a la derecha en vez de la izquierda */
+.proyecto-caract__fila--invertida{ /* Modificador que invierte el orden de imagen y texto */
+    flex-direction: row-reverse; /* Da vuelta el orden visual de los elementos */
+}
+
+.proyecto-caract__imagen{ /* Contenedor de la imagen de cada fila */
+    flex: 1 1 480px; /* Ocupa espacio flexible con un minimo de 480px */
+}
+
+.proyecto-caract__imagen img{ /* Captura de pantalla de la caracteristica */
+    width: 100%; /* Ocupa todo el ancho de su columna */
+    border-radius: 14px; /* Bordes redondeados */
+    box-shadow: 0 15px 35px rgba(10,47,90,.18); /* Sombra azulada suave */
+}
+
+.proyecto-caract__texto{ /* Contenedor del texto de cada fila */
+    flex: 1 1 380px; /* Ocupa espacio flexible con un minimo de 380px */
+}
+
+.proyecto-caract__texto h3{ /* Titulo de la caracteristica */
+    color: #0a2f5a; /* Azul oscuro, mismo color del titulo principal */
+    font-size: 24px; /* Tamaño mediano-grande */
+    font-weight: 700; /* Negrita */
+    margin-bottom: 14px; /* Espacio debajo */
+}
+
+.proyecto-caract__texto p{ /* Descripcion de la caracteristica */
+    color: #555; /* Gris oscuro para buena lectura */
+    font-size: 16px; /* Tamaño legible */
+    line-height: 1.8; /* Espaciado amplio entre lineas */
+}
+
+/*RESPONSIVE*/
+@media (max-width: 768px){ /* Ajustes para pantallas pequeñas */
+    .proyecto-caract{ /* Reduce el espacio lateral en movil */
+        padding: 70px 6%; /* Menos espacio a los costados */
+    }
+
+    .proyecto-caract__fila,
+    .proyecto-caract__fila--invertida{ /* En movil todas las filas se ven igual, sin invertir */
+        flex-direction: column; /* Imagen arriba, texto abajo, siempre en ese orden */
+    }
+}

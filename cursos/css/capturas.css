@@ -2,90 +2,90 @@
         CAPTURAS
 =========================*/
 
-.capturas{
-    padding: 90px 0;
-    background: #c9d0dc;
-    text-align: center;
+.capturas{ /* Estilo principal de la sección de capturas */
+    padding: 90px 0; /* Añade espacio vertical arriba y abajo */
+    background: #c9d0dc; /* Define el color de fondo gris azulado */
+    text-align: center; /* Centra el contenido dentro de la sección */
 }
 
-.capturas .contenedor{
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
+.capturas .contenedor{ /* Ajusta el ancho del contenedor interno */
+    width: 90%; /* Ocupa el 90% del ancho disponible */
+    max-width: 1100px; /* Limita el ancho máximo para pantallas grandes */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
 }
 
-.capturas h2{
-    font-size: 2.4rem;
-    font-weight: 800;
-    color: #0a2f5a;
-    margin-bottom: 12px;
+.capturas h2{ /* Estilo del título principal */
+    font-size: 2.4rem; /* Tamaño grande del texto */
+    font-weight: 800; /* Hace el texto muy grueso */
+    color: #0a2f5a; /* Color azul oscuro del título */
+    margin-bottom: 12px; /* Separa el título del texto siguiente */
 }
 
-.capturas > .contenedor > p{
-    color: #666;
-    font-size: 1.05rem;
-    margin-bottom: 50px;
+.capturas > .contenedor > p{ /* Estilo del párrafo introductorio */
+    color: #666; /* Color gris del texto */
+    font-size: 1.05rem; /* Tamaño moderado del texto */
+    margin-bottom: 50px; /* Da espacio debajo del párrafo */
 }
 
-.capturas-grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-    margin-bottom: 50px;
+.capturas-grid{ /* Define la cuadrícula de imágenes o capturas */
+    display: grid; /* Usa el modo de diseño en cuadrícula */
+    grid-template-columns: repeat(2, 1fr); /* Coloca dos columnas iguales */
+    gap: 32px; /* Espacio entre los elementos de la cuadrícula */
+    margin-bottom: 50px; /* Separa la cuadrícula del botón final */
 }
 
-.captura-item{
-    margin: 0;
-    background: #fff;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0,0,0,.08);
-    transition: .35s ease;
+.captura-item{ /* Estilo de cada tarjeta de captura */
+    margin: 0; /* Elimina el margen por defecto */
+    background: #fff; /* Fondo blanco para la tarjeta */
+    border-radius: 16px; /* Redondea las esquinas */
+    overflow: hidden; /* Oculta contenido que sobresalga */
+    box-shadow: 0 15px 35px rgba(0,0,0,.08); /* Agrega sombra suave */
+    transition: .35s ease; /* Suaviza los cambios al interactuar */
 }
 
-.captura-item:hover{
-    transform: translateY(-6px);
-    box-shadow: 0 20px 45px rgba(0,114,255,.15);
+.captura-item:hover{ /* Efecto al pasar el mouse sobre cada tarjeta */
+    transform: translateY(-6px); /* Levanta la tarjeta ligeramente */
+    box-shadow: 0 20px 45px rgba(0,114,255,.15); /* Cambia la sombra al hover */
 }
 
-.captura-item img{
-    width: 100%;
-    display: block;
+.captura-item img{ /* Estilo de las imágenes dentro de cada tarjeta */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    display: block; /* Elimina espacios extra debajo de la imagen */
 }
 
-.captura-item figcaption{
-    padding: 16px;
-    font-size: .95rem;
-    font-weight: 600;
-    color: #0a2f5a;
-    border-top: 1px solid #eef2f8;
+.captura-item figcaption{ /* Estilo del texto debajo de cada imagen */
+    padding: 16px; /* Añade espacio interno */
+    font-size: .95rem; /* Tamaño de letra pequeño */
+    font-weight: 600; /* Hace el texto algo más grueso */
+    color: #0a2f5a; /* Color azul oscuro */
+    border-top: 1px solid #eef2f8; /* Línea superior sutil */
 }
 
 /* BOTÓN "VER PROYECTO EN VIVO" */
-.proyecto-cta{
-    text-align: center;
+.proyecto-cta{ /* Centra el bloque del botón */
+    text-align: center; /* Alinea el contenido al centro */
 }
 
-.btn-ver-proyecto{
-    display: inline-block;
-    background: linear-gradient(135deg, #00bfff, #0066ff);
-    color: #fff;
-    text-decoration: none;
-    padding: 15px 38px;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 1.05rem;
-    transition: .3s ease;
+.btn-ver-proyecto{ /* Estilo del botón principal */
+    display: inline-block; /* Permite que el botón tenga tamaño propio */
+    background: linear-gradient(135deg, #00bfff, #0066ff); /* Fondo con degradado azul */
+    color: #fff; /* Texto blanco */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    padding: 15px 38px; /* Espacio interno del botón */
+    border-radius: 10px; /* Redondea las esquinas */
+    font-weight: bold; /* Hace el texto más visible */
+    font-size: 1.05rem; /* Tamaño del texto */
+    transition: .3s ease; /* Suaviza la transición */
 }
 
-.btn-ver-proyecto:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0,191,255,.35);
+.btn-ver-proyecto:hover{ /* Efecto al pasar el mouse sobre el botón */
+    transform: translateY(-3px); /* Mueve el botón hacia arriba */
+    box-shadow: 0 10px 25px rgba(0,191,255,.35); /* Agrega sombra azul */
 }
 
 /* RESPONSIVE */
-@media(max-width: 700px){
-    .capturas-grid{
-        grid-template-columns: 1fr;
+@media(max-width: 700px){ /* Ajusta la disposición en pantallas pequeñas */
+    .capturas-grid{ /* Cambia la cuadrícula a una sola columna */
+        grid-template-columns: 1fr; /* Usa una sola columna en móviles */
     }
 }

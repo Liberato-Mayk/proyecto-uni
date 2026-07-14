@@ -1,108 +1,108 @@
 /*RESET BÁSICO*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+* { /* Aplica un reinicio básico de estilos para todos los elementos */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    box-sizing: border-box; /* Hace que el ancho y alto incluyan padding y borde */
+    font-family: Arial, sans-serif; /* Define la fuente general */
 }
 
 /*HEADER MODERNO*/
-.header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+.header { /* Estilo del encabezado principal */
+    position: sticky; /* Mantiene el header visible al hacer scroll */
+    top: 0; /* Se pega en la parte superior */
+    z-index: 1000; /* Asegura que quede por encima del contenido */
 
-    background: rgba(10, 25, 45, 0.75);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(10, 25, 45, 0.75); /* Fondo oscuro semitransparente */
+    backdrop-filter: blur(12px); /* Efecto de desenfoque trasero */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* Línea inferior sutil */
 }
 
 /* CONTENEDOR */
-.header__container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+.header__container { /* Contenedor interno del header */
+    width: 90%; /* Ocupa el 90% del ancho disponible */
+    max-width: 1200px; /* Limita el ancho máximo */
+    margin: auto; /* Centra el contenedor */
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 0;
+    display: flex; /* Usa flexbox para organizar elementos */
+    justify-content: space-between; /* Separa logo y navegación */
+    align-items: center; /* Centra verticalmente */
+    padding: 12px 0; /* Espacio interno arriba y abajo */
 }
 
 /*LOGO*/ 
-.header__logo{
-    display: flex;
-    align-items: center;
+.header__logo{ /* Contenedor del logo */
+    display: flex; /* Permite alinear el logo */
+    align-items: center; /* Centra verticalmente */
 }
 
-.logo{
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    transition: .3s ease;
+.logo{ /* Estilo del texto del logo */
+    text-decoration: none; /* Quita el subrayado */
+    font-size: 2rem; /* Tamaño grande del texto */
+    font-weight: 700; /* Texto en negrita */
+    letter-spacing: 1px; /* Espaciado ligero entre letras */
+    transition: .3s ease; /* Suaviza cambios de estilo */
 }
 
-.logo-tech{
-    color: #ffffff;
+.logo-tech{ /* Parte del logo en color blanco */
+    color: #ffffff; /* Texto blanco */
 }
 
-.logo-forge{
-    color: #00c6ff;
+.logo-forge{ /* Parte del logo en color azul */
+    color: #00c6ff; /* Color cyan */
 }
 
-.logo:hover{
-    transform: scale(1.05);
-    text-shadow: 0 0 10px rgba(0,198,255,.6);
+.logo:hover{ /* Efecto al pasar el mouse sobre el logo */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    text-shadow: 0 0 10px rgba(0,198,255,.6); /* Sombra luminosa azul */
 }
 /* NAV */
-.header__nav ul {
-    list-style: none;
-    display: flex;
-    gap: 28px;
+.header__nav ul { /* Lista de enlaces de navegación */
+    list-style: none; /* Elimina viñetas */
+    display: flex; /* Muestra los enlaces en fila */
+    gap: 28px; /* Espacio entre enlaces */
 }
 
 /* LINKS */
-.header__nav a {
-    text-decoration: none;
-    color: #eaf2ff;
-    font-weight: 500;
-    font-size: 15px;
-    position: relative;
-    transition: 0.3s;
+.header__nav a { /* Estilo de cada enlace del nav */
+    text-decoration: none; /* Quita el subrayado */
+    color: #eaf2ff; /* Color claro para los enlaces */
+    font-weight: 500; /* Peso medio */
+    font-size: 15px; /* Tamaño del texto */
+    position: relative; /* Necesario para la línea animada */
+    transition: 0.3s; /* Suaviza cambios */
 }
 
 /* EFECTO LINEA ANIMADA */
-.header__nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 0%;
-    height: 2px;
-    background: linear-gradient(90deg, #00c6ff, #0072ff);
-    transition: 0.3s;
+.header__nav a::after { /* Línea decorativa debajo de los enlaces */
+    content: ""; /* Crea el pseudo-elemento */
+    position: absolute; /* Posiciona respecto al enlace */
+    left: 0; /* Alinea a la izquierda */
+    bottom: -6px; /* Lo ubica debajo */
+    width: 0%; /* Inicialmente invisible */
+    height: 2px; /* Grosor de la línea */
+    background: linear-gradient(90deg, #00c6ff, #0072ff); /* Gradiente azul */
+    transition: 0.3s; /* Animación suave */
 }
 
-.header__nav a:hover {
-    color: #00c6ff;
+.header__nav a:hover { /* Cambia de color al pasar el mouse */
+    color: #00c6ff; /* Azul brillante */
 }
 
-.header__nav a:hover::after {
-    width: 100%;
+.header__nav a:hover::after { /* Muestra la línea al pasar el mouse */
+    width: 100%; /* La línea ocupa todo el ancho */
 }
 
 /*RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Ajustes para pantallas pequeñas */
 
-    .header__container {
-        flex-direction: column;
-        gap: 10px;
+    .header__container { /* Cambia la distribución a vertical */
+        flex-direction: column; /* Apila logo y navegación */
+        gap: 10px; /* Espacio entre elementos */
     }
 
-    .header__nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+    .header__nav ul { /* Ajusta los enlaces para que se acomoden mejor */
+        flex-wrap: wrap; /* Permite que bajen de línea */
+        justify-content: center; /* Centra los enlaces */
+        gap: 15px; /* Menor separación entre enlaces */
     }
 }

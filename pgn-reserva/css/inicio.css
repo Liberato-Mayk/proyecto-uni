@@ -1,0 +1,55 @@
+/*INICIO DEL PROYECTO*/
+
+.proyecto-hero{ /* Seccion que presenta el proyecto, fondo oscuro tipo portada */
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); /* Degradado azul oscuro, mismo tono de marca */
+    padding: 90px 10%; /* Espacio interno arriba/abajo y a los lados */
+}
+
+.proyecto-hero__container{ /* Contenedor que divide texto e imagen en 2 columnas */
+    max-width: 1200px; /* Ancho maximo del contenido */
+    margin: 0 auto; /* Centrado en la pagina */
+    display: flex; /* Acomoda texto e imagen en fila */
+    align-items: center; /* Centra verticalmente ambas columnas */
+    gap: 60px; /* Espacio entre columnas */
+    flex-wrap: wrap; /* En pantallas chicas las columnas bajan de linea */
+}
+
+.proyecto-hero__texto{ /* Columna izquierda con el titulo y la descripcion */
+    flex: 1 1 400px; /* Ocupa espacio flexible con un minimo de 400px */
+}
+
+.proyecto-hero__texto h1{ /* Titulo grande del proyecto */
+    color: #00c6ff; /* Color cyan de la marca, para que resalte sobre el fondo oscuro */
+    font-size: 36px; /* Tamaño grande */
+    font-weight: 700; /* Negrita */
+    line-height: 1.3; /* Espaciado entre lineas */
+    margin-bottom: 24px; /* Espacio debajo, antes de la descripcion */
+}
+
+.proyecto-hero__texto p{ /* Parrafo descriptivo del proyecto */
+    color: #d1d5db; /* Gris claro, igual al resto de textos secundarios del sitio */
+    font-size: 16px; /* Tamaño legible */
+    line-height: 1.9; /* Espaciado amplio entre lineas, facil de leer */
+}
+
+.proyecto-hero__imagen{ /* Columna derecha con la captura de pantalla del proyecto */
+    flex: 1 1 400px; /* Ocupa espacio flexible con un minimo de 400px */
+}
+
+.proyecto-hero__imagen img{ /* Imagen/captura del sistema */
+    width: 100%; /* Ocupa todo el ancho de su columna */
+    border-radius: 14px; /* Bordes redondeados */
+    border: 1px solid rgba(255,255,255,.1); /* Borde sutil para separarla del fondo */
+    box-shadow: 0 20px 50px rgba(0,0,0,.5); /* Sombra profunda para dar efecto flotante */
+}
+
+/*RESPONSIVE*/
+@media (max-width: 768px){ /* Ajustes para pantallas pequeñas */
+    .proyecto-hero{ /* Reduce el espacio lateral en movil */
+        padding: 70px 6%; /* Menos espacio a los costados */
+    }
+
+    .proyecto-hero__texto h1{ /* Reduce el tamaño del titulo */
+        font-size: 28px; /* Texto mas chico */
+    }
+}

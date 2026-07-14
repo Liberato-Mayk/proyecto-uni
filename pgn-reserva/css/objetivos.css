@@ -1,0 +1,65 @@
+/*OBJETIVOS DEL PROYECTO*/
+
+.proyecto-obj{ /* Seccion de objetivos, fondo claro un poco distinto para diferenciarla de la anterior */
+    background: #eef2f9; /* Gris azulado muy claro */
+    padding: 90px 10%; /* Espacio interno arriba/abajo y a los lados */
+}
+
+.proyecto-obj h2{ /* Titulo grande de la seccion */
+    text-align: center; /* Texto centrado */
+    color: #0a2f5a; /* Azul oscuro, igual al resto de titulos de la pagina */
+    font-size: 32px; /* Tamaño grande */
+    font-weight: 700; /* Negrita */
+    margin-bottom: 50px; /* Espacio antes de las tarjetas */
+}
+
+.proyecto-obj__grid{ /* Cuadricula que acomoda las tarjetas de objetivos */
+    display: grid; /* Layout tipo cuadricula */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas automaticas segun el espacio */
+    gap: 26px; /* Espacio entre tarjetas */
+    max-width: 1200px; /* Ancho maximo de la cuadricula */
+    margin: 0 auto; /* Centrada en la pagina */
+}
+
+.proyecto-obj__card{ /* Cada tarjeta individual de objetivo */
+    background: #ffffff; /* Fondo blanco para resaltar sobre el fondo gris */
+    border-radius: 14px; /* Bordes redondeados */
+    padding: 32px 28px; /* Espacio interno */
+    box-shadow: 0 8px 20px rgba(10,47,90,.08); /* Sombra suave */
+}
+
+.proyecto-obj__icono{ /* Circulo con el icono de check */
+    width: 42px; /* Ancho fijo */
+    height: 42px; /* Alto fijo, igual al ancho para que sea un circulo */
+    display: flex; /* Para centrar el simbolo adentro */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    border-radius: 50%; /* Forma circular */
+    background: linear-gradient(135deg, #00c6ff, #0072ff); /* Mismo degradado azul-cyan de la marca */
+    color: #ffffff; /* Simbolo en blanco */
+    font-size: 16px; /* Tamaño del simbolo */
+    margin-bottom: 18px; /* Espacio debajo, antes del titulo */
+}
+
+.proyecto-obj__card h3{ /* Titulo de cada objetivo */
+    color: #0a2f5a; /* Azul oscuro */
+    font-size: 18px; /* Tamaño mediano */
+    margin-bottom: 10px; /* Espacio debajo */
+}
+
+.proyecto-obj__card p{ /* Descripcion de cada objetivo */
+    color: #666; /* Gris, igual al resto de textos secundarios */
+    font-size: 14.5px; /* Tamaño discreto */
+    line-height: 1.7; /* Espaciado entre lineas */
+}
+
+/*RESPONSIVE*/
+@media (max-width: 768px){ /* Ajustes para pantallas pequeñas */
+    .proyecto-obj{ /* Reduce el espacio lateral en movil */
+        padding: 70px 6%; /* Menos espacio a los costados */
+    }
+
+    .proyecto-obj h2{ /* Reduce el tamaño del titulo */
+        font-size: 26px; /* Texto mas chico */
+    }
+}

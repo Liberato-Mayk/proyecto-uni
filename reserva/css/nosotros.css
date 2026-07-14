@@ -1,0 +1,73 @@
+/* ======================================================
+   ARCHIVO: nosotros.css
+   AQUI VAN LOS ESTILOS DE LA SECCION "SOBRE NOSOTROS"
+   ====================================================== */
+
+/* separacion arriba y abajo de la seccion para que no quede pegada a las demas */
+.nosotros {
+    padding: 100px 0;
+}
+
+/* el contenedor se divide en 2 columnas: imagen y texto */
+.nosotros .contenedor {
+    display: flex;
+    align-items: center;
+    gap: 60px; /* espacio entre la imagen y el texto */
+}
+
+/* columna de la imagen, ocupa la mitad del espacio y es relativa para ubicar la imagen pequeña encima */
+.cont-img {
+    position: relative;
+    flex: 1; /* ocupa el mismo espacio que la columna de texto */
+}
+
+.cont-img img {
+    border-radius: 10px; /* bordes redondeados en la imagen principal */
+}
+
+/* columna del texto, ocupa la otra mitad del espacio */
+.cont-text {
+    flex: 1;
+}
+
+/* parrafos dentro del texto de la seccion */
+.cont-text p {
+    color: var(--color-texto-gris);
+    margin-bottom: 15px;
+}
+
+/* resaltamos en dorado las palabras importantes dentro del texto (ej: numero de habitaciones) */
+.cont-text strong {
+    color: var(--color-dorado);
+}
+
+/* fila de estadisticas (4 hoteles, 20+ años, etc) */
+.estadisticas {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #333333; /* linea que separa el texto de las estadisticas */
+}
+
+/* cada bloque individual de estadistica */
+.est {
+    display: flex;
+    flex-direction: column;
+}
+
+/* numero grande de cada estadistica (ej: "4", "20+") */
+.est-num {
+    font-family: var(--fuente-titulos);
+    color: var(--color-dorado);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* texto pequeño debajo del numero (ej: "HOTELES", "AÑOS") */
+.est-titulo {
+    color: var(--color-texto-gris);
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}

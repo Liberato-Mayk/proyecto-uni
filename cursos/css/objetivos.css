@@ -4,7 +4,7 @@
 
 .objetivos{
     padding: 90px 0; /* agrega 90px de espacio arriba y abajo */
-    background: #6a6965; /* color de fondo oscuro para la sección */
+    background: #c9d0dc; /* color de fondo oscuro para la sección */
 }
 
 .objetivo-principal{
@@ -34,7 +34,7 @@
 }
 
 .objetivo-principal p{
-    color: #9ca3af; /* color gris claro para el texto descriptivo */
+    color: #3a3d42; /* color gris claro para el texto descriptivo */
     font-size: 1.1rem; /* tamaño de letra cómodo para lectura */
     line-height: 1.8; /* espacio entre líneas para mejor legibilidad */
 }

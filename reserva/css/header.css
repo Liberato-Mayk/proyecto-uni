@@ -1,0 +1,58 @@
+/* ======================================================
+   ARCHIVO: header.css
+   AQUI VAN LOS ESTILOS DEL ENCABEZADO (LOGO Y MENU)
+   ====================================================== */
+
+/* el header queda fijo arriba de la pantalla siempre visible */
+header {
+    background-color: #000000;
+    position: fixed; /* se queda pegado arriba aunque se haga scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* para que quede por encima de las demas secciones */
+}
+
+/* contenedor del menu: acomoda el logo a la izquierda y los links a la derecha */
+.nav-contenedor {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+/* estilo del logo "Luxe Hotels" */
+.logo {
+    font-family: var(--fuente-titulos);
+    font-size: 22px;
+    color: var(--color-dorado);
+    font-weight: 600;
+}
+
+/* contenedor de los links del menu, en fila */
+.nav-menu {
+    display: flex;
+    gap: 35px; /* separacion entre cada link */
+    align-items: center;
+}
+
+/* estilo de cada link del menu */
+.nav-link {
+    color: var(--color-blanco);
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+/* efecto al pasar el mouse por un link */
+.nav-link:hover {
+    color: var(--color-dorado);
+}
+
+/* estilo especial para el boton "Reservar" dentro del menu */
+.nav-menu .btn-primary {
+    padding: 10px 22px; /* un poco mas pequeño que los botones normales */
+}
