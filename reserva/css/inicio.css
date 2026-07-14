@@ -1,9 +1,3 @@
-/* ======================================================
-   ARCHIVO: inicio.css
-   AQUI VAN LOS ESTILOS DE LA SECCION "INICIO"
-   (la foto de fondo debe llamarse "inicio" dentro de la carpeta img)
-   ====================================================== */
-
 /* seccion inicio: ocupa toda la pantalla con imagen de fondo */
 .inicio {
     /* el degradado oscuro se pone encima de la imagen para que el texto se lea bien */

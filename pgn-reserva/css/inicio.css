@@ -2,6 +2,9 @@
 
 .proyecto-hero{ /* Seccion que presenta el proyecto, fondo oscuro tipo portada */
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); /* Degradado azul oscuro, mismo tono de marca */
+    min-height: 100vh; /* Ocupa el 100% del alto de la pantalla */
+    display: flex; /* Para poder centrar el contenido verticalmente */
+    align-items: center; /* Centra el contenido en el medio de la pantalla */
     padding: 90px 10%; /* Espacio interno arriba/abajo y a los lados */
 }
 

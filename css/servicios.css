@@ -12,6 +12,10 @@
     text-align: center;
 }
 
+.proyect {
+    border-radius: 8px;
+}
+
 h3 {
     font-size: 32px;
     color: #0b2a4a;
