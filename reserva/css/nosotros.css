@@ -5,69 +5,69 @@
 
 /* separacion arriba y abajo de la seccion para que no quede pegada a las demas */
 .nosotros {
-    padding: 100px 0;
+    padding: 100px 0; /* espacio arriba y abajo de la sección sobre nosotros */
 }
 
 /* el contenedor se divide en 2 columnas: imagen y texto */
 .nosotros .contenedor {
-    display: flex;
-    align-items: center;
-    gap: 60px; /* espacio entre la imagen y el texto */
+    display: flex; /* usa flexbox para alinear imagen y texto en una fila */
+    align-items: center; /* centra verticalmente los elementos del contenedor */
+    gap: 60px; /* espacio entre la columna de imagen y la columna de texto */
 }
 
 /* columna de la imagen, ocupa la mitad del espacio y es relativa para ubicar la imagen pequeña encima */
 .cont-img {
-    position: relative;
-    flex: 1; /* ocupa el mismo espacio que la columna de texto */
+    position: relative; /* posicion relativa para ubicar elementos absolutos dentro */
+    flex: 1; /* la columna de imagen ocupa espacio proporcional igual */
 }
 
 .cont-img img {
-    border-radius: 10px; /* bordes redondeados en la imagen principal */
+    border-radius: 10px; /* redondea las esquinas de la imagen principal */
 }
 
 /* columna del texto, ocupa la otra mitad del espacio */
 .cont-text {
-    flex: 1;
+    flex: 1; /* la columna de texto ocupa espacio proporcional igual */
 }
 
 /* parrafos dentro del texto de la seccion */
 .cont-text p {
-    color: var(--color-texto-gris);
-    margin-bottom: 15px;
+    color: var(--color-texto-gris); /* color gris para los párrafos informativos */
+    margin-bottom: 15px; /* espacio debajo de cada párrafo */
 }
 
 /* resaltamos en dorado las palabras importantes dentro del texto (ej: numero de habitaciones) */
 .cont-text strong {
-    color: var(--color-dorado);
+    color: var(--color-dorado); /* color dorado para texto destacado */
 }
 
 /* fila de estadisticas (4 hoteles, 20+ años, etc) */
 .estadisticas {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-    padding-top: 30px;
-    border-top: 1px solid #333333; /* linea que separa el texto de las estadisticas */
+    display: flex; /* usa flexbox para alinear las estadísticas en fila */
+    justify-content: space-between; /* separa uniformemente cada estadística */
+    margin-top: 30px; /* espacio arriba de la fila de estadísticas */
+    padding-top: 30px; /* espacio interno arriba dentro de la fila */
+    border-top: 1px solid #333333; /* línea superior para separar estadísticas del texto */
 }
 
 /* cada bloque individual de estadistica */
 .est {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* usa flexbox para alinear numero y texto en columna */
+    flex-direction: column; /* coloca los elementos verticalmente */
 }
 
 /* numero grande de cada estadistica (ej: "4", "20+") */
 .est-num {
-    font-family: var(--fuente-titulos);
-    color: var(--color-dorado);
-    font-size: 32px;
-    font-weight: 700;
+    font-family: var(--fuente-titulos); /* tipografía de títulos para el número */
+    color: var(--color-dorado); /* color dorado para destacar el número */
+    font-size: 32px; /* tamaño grande para el número */
+    font-weight: 700; /* peso de fuente negrita */
 }
 
 /* texto pequeño debajo del numero (ej: "HOTELES", "AÑOS") */
 .est-titulo {
-    color: var(--color-texto-gris);
-    font-size: 12px;
-    letter-spacing: 1px;
-    margin-top: 5px;
+    color: var(--color-texto-gris); /* color gris para el texto secundario */
+    font-size: 12px; /* tamaño más pequeño para el subtítulo */
+    letter-spacing: 1px; /* espacio entre letras para mejor legibilidad */
+    margin-top: 5px; /* espacio entre el número y el texto */
 }

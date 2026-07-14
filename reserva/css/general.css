@@ -6,95 +6,95 @@
 
 /* variables: aqui guardamos los colores y fuentes para no repetirlos en todo el css */
 :root {
-    --color-fondo: #0a0a0a;         /* color de fondo oscuro que se usa en casi toda la pagina */
-    --color-dorado: #d4af37;        /* color dorado que se usa en titulos pequeños, numeros y botones */
-    --color-blanco: #ffffff;        /* color blanco para los titulos grandes */
-    --color-texto-gris: #b3b3b3;    /* color gris para los parrafos y descripciones */
-    --fuente-titulos: 'Playfair Display', serif;  /* fuente para los titulos grandes (estilo elegante) */
-    --fuente-texto: 'Poppins', sans-serif;        /* fuente para el texto normal */
+    --color-fondo: #0a0a0a;         /* color de fondo oscuro que se usa en casi toda la página */
+    --color-dorado: #d4af37;        /* color dorado que se usa en títulos pequeños, números y botones */
+    --color-blanco: #ffffff;        /* color blanco para títulos grandes y textos principales */
+    --color-texto-gris: #b3b3b3;    /* color gris para párrafos y descripciones */
+    --fuente-titulos: 'Playfair Display', serif;  /* fuente elegante para los títulos */
+    --fuente-texto: 'Poppins', sans-serif;        /* fuente moderna para el texto normal */
 }
 
-/* reset: quitamos los margenes y rellenos que trae el navegador por defecto */
+/* reset: quitamos los márgenes y rellenos que trae el navegador por defecto */
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0; /* elimina margen predeterminado */
+    padding: 0; /* elimina padding predeterminado */
     box-sizing: border-box; /* hace que el padding no aumente el tamaño total del elemento */
 }
 
-/* estilo base del body, aplica a toda la pagina */
+/* estilo base del body, aplica a toda la página */
 body {
-    background-color: var(--color-fondo);
-    font-family: var(--fuente-texto);
-    color: var(--color-blanco);
-    line-height: 1.6; /* separacion entre lineas de texto para que se lea mejor */
+    background-color: var(--color-fondo); /* fondo oscuro de la página */
+    font-family: var(--fuente-texto); /* fuente base para todo el texto */
+    color: var(--color-blanco); /* color blanco por defecto para textos */
+    line-height: 1.6; /* separación entre líneas para mejorar lectura */
 }
 
 /* quitamos el subrayado y el color azul por defecto de los links */
 a {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none; /* elimina subrayado de los enlaces */
+    color: inherit; /* hereda el color del texto padre */
 }
 
-/* las imagenes no deben salirse de su contenedor */
+/* las imágenes no deben salirse de su contenedor */
 img {
-    max-width: 100%;
-    display: block;
+    max-width: 100%; /* limita la imagen al ancho del contenedor */
+    display: block; /* elimina espacio inferior y hace el ancho consistente */
 }
 
-/* contenedor general: centra el contenido y le da un ancho maximo */
+/* contenedor general: centra el contenido y le da un ancho máximo */
 .contenedor {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto; /* centra el contenedor en la pagina */
+    width: 90%; /* ancho relativo para dejar espacio lateral */
+    max-width: 1200px; /* ancho máximo en pantallas grandes */
+    margin: 0 auto; /* centra horizontalmente el contenedor */
 }
 
-/* estilo base para todos los botones de la pagina */
+/* estilo base para todos los botones de la página */
 .btn {
-    display: inline-block;
-    padding: 15px 30px;
-    border-radius: 8px;
-    font-weight: 600;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.3s; /* efecto suave al pasar el mouse */
+    display: inline-block; /* permite ancho personalizado y padding */
+    padding: 15px 30px; /* espacio interno del botón */
+    border-radius: 8px; /* bordes redondeados del botón */
+    font-weight: 600; /* texto con peso semi-negrita */
+    text-align: center; /* centra el texto dentro del botón */
+    cursor: pointer; /* cursor de mano al pasar sobre el botón */
+    transition: 0.3s; /* efecto suave al hover */
 }
 
-/* boton principal: fondo dorado (ej: "Ver hoteles") */
+/* botón principal: fondo dorado (ej: "Ver hoteles") */
 .btn-primary {
-    background-color: var(--color-dorado);
-    color: #1a1a1a;
-    border: 2px solid var(--color-dorado);
+    background-color: var(--color-dorado); /* fondo dorado */
+    color: #1a1a1a; /* texto oscuro para contraste */
+    border: 2px solid var(--color-dorado); /* borde dorado */
 }
 
 .btn-primary:hover {
-    background-color: transparent;
-    color: var(--color-dorado);
+    background-color: transparent; /* fondo transparente en hover */
+    color: var(--color-dorado); /* texto dorado en hover */
 }
 
-/* boton secundario: solo con borde, sin relleno (ej: "Hacer reserva") */
+/* botón secundario: solo con borde, sin relleno (ej: "Hacer reserva") */
 .btn-outline {
-    background-color: transparent;
-    color: var(--color-blanco);
-    border: 2px solid var(--color-blanco);
+    background-color: transparent; /* fondo transparente */
+    color: var(--color-blanco); /* texto blanco */
+    border: 2px solid var(--color-blanco); /* borde blanco */
 }
 
 .btn-outline:hover {
-    background-color: var(--color-blanco);
-    color: #1a1a1a;
+    background-color: var(--color-blanco); /* fondo blanco en hover */
+    color: #1a1a1a; /* texto oscuro en hover */
 }
 
-/* etiqueta pequeña dorada que aparece arriba de los titulos (ej: "SOBRE NOSOTROS") */
+/* etiqueta pequeña dorada que aparece arriba de los títulos (ej: "SOBRE NOSOTROS") */
 .etiqueta {
-    color: var(--color-dorado);
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 2px; /* separacion entre letras para dar estilo elegante */
-    text-transform: uppercase;
+    color: var(--color-dorado); /* texto dorado */
+    font-size: 14px; /* tamaño pequeño */
+    font-weight: 600; /* peso de fuente semi-negrita */
+    letter-spacing: 2px; /* espacio entre letras para estilo elegante */
+    text-transform: uppercase; /* convierte el texto a mayúsculas */
 }
 
-/* titulo grande que se repite en varias secciones */
+/* título grande que se repite en varias secciones */
 .titulo-texto {
-    font-family: var(--fuente-titulos);
-    font-size: 40px;
-    margin: 15px 0 20px 0;
+    font-family: var(--fuente-titulos); /* fuente elegante para títulos */
+    font-size: 40px; /* tamaño grande para el título */
+    margin: 15px 0 20px 0; /* espacio arriba y debajo del título */
 }

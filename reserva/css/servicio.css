@@ -1,58 +1,53 @@
-/* ======================================================
-   ARCHIVO: servicios.css
-   AQUI VAN LOS ESTILOS DE LA SECCION "SERVICIOS" (¿POR QUE ELEGIRNOS?)
-   ====================================================== */
-
 /* separacion arriba y abajo de la seccion */
 .servicios {
-    padding: 100px 0;
+    padding: 100px 0; /* espacio superior e inferior de la sección servicios */
 }
 
 /* parte de arriba con el titulo y la descripcion, centrada */
 .parte-sub {
-    text-align: center;
-    max-width: 650px;
-    margin: 0 auto 60px auto; /* la centra y le da espacio abajo antes de las tarjetas */
+    text-align: center; /* centra el texto horizontalmente */
+    max-width: 650px; /* limita el ancho del bloque de texto */
+    margin: 0 auto 60px auto; /* centra el bloque y añade espacio debajo */
 }
 
 /* descripcion debajo del titulo de la seccion */
 .section-desc {
-    color: var(--color-texto-gris);
-    margin-top: 15px;
+    color: var(--color-texto-gris); /* color gris para el texto secundario */
+    margin-top: 15px; /* separacion arriba respecto al titulo */
 }
 
 /* contenedor de las tarjetas: se acomodan en fila y pasan a la siguiente linea si no caben */
 .parte-caracteristicas {
-    display: flex;
-    flex-wrap: wrap; /* permite que las tarjetas bajen de linea en pantallas pequeñas */
-    gap: 25px;
+    display: flex; /* usa flexbox para alinear las tarjetas horizontalmente */
+    flex-wrap: wrap; /* permite que las tarjetas se muevan a la siguiente linea */
+    gap: 25px; /* espacio entre las tarjetas */
 }
 
 /* cada tarjeta individual */
 .feature-card {
-    background-color: #141414;
-    border: 1px solid #262626;
-    border-radius: 10px;
-    padding: 35px 30px;
+    background-color: #141414; /* fondo oscuro para cada tarjeta */
+    border: 1px solid #262626; /* borde gris oscuro alrededor de la tarjeta */
+    border-radius: 10px; /* esquinas redondeadas */
+    padding: 35px 30px; /* espacio interior de la tarjeta */
 
     /* con flex-basis hacemos que quepan 3 tarjetas por fila, restando el espacio del gap */
-    flex: 1 1 calc(33.333% - 25px);
+    flex: 1 1 calc(33.333% - 25px); /* tamaño flexible para adaptarse a diferentes pantallas */
 }
 
 /* icono (emoji) que va arriba de cada tarjeta */
 .feature-icon {
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 32px; /* tamaño del icono */
+    margin-bottom: 20px; /* separacion inferior entre icono y texto */
 }
 
 /* titulo de cada tarjeta */
 .feature-card h3 {
-    font-size: 20px;
-    margin-bottom: 12px;
+    font-size: 20px; /* tamaño de fuente del titulo */
+    margin-bottom: 12px; /* espacio debajo del titulo */
 }
 
 /* texto descriptivo de cada tarjeta */
 .feature-card p {
-    color: var(--color-texto-gris);
-    font-size: 15px;
+    color: var(--color-texto-gris); /* color gris para el texto descriptivo */
+    font-size: 15px; /* tamaño de fuente del texto */
 }

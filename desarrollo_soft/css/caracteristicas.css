@@ -1,85 +1,85 @@
 /* ===== SECCIÓN CARACTERÍSTICAS ===== */
 .caracteristicas {
-    padding: 80px 10%;
-    background: #f5f9fc;
+    padding: 80px 10%; /* espacio interno arriba/abajo y laterales */
+    background: #f5f9fc; /* fondo claro para separar visualmente */
 }
 
 .titulo-caracteristicas {
-    text-align: center;
-    margin-bottom: 60px;
+    text-align: center; /* centra el título y subtítulo */
+    margin-bottom: 60px; /* espacio debajo del bloque de encabezado */
 }
 
 .titulo-caracteristicas h2 {
-    font-size: 2.2rem;
-    color: #0a2540;
-    margin-bottom: 10px;
+    font-size: 2.2rem; /* tamaño grande para el título principal */
+    color: #0a2540; /* color oscuro para buen contraste */
+    margin-bottom: 10px; /* espacio entre título y párrafo */
 }
 
 .titulo-caracteristicas p {
-    color: #5f6c7b;
-    font-size: 1rem;
+    color: #5f6c7b; /* color gris azulado para texto secundario */
+    font-size: 1rem; /* tamaño de fuente legible */
 }
 
 /* CONTENEDOR DE CARTAS */
 .caracteristicas .caracteristicas {
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
+    display: flex; /* usa flexbox para apilar las cartas */
+    flex-direction: column; /* cada carta en su propia fila */
+    gap: 80px; /* espacio vertical entre cartas */
 }
 
 /* CARTA */
 .carta {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+    display: flex; /* coloca texto e imagen lado a lado */
+    align-items: center; /* centra verticalmente el contenido */
+    justify-content: space-between; /* separa el texto de la imagen */
+    gap: 40px; /* espacio entre los dos elementos */
 }
 
 /* INTERCALADO */
 .carta:nth-child(even) {
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; /* invierte el orden en cartas pares */
 }
 
 /* TEXTO */
 .carta-texto {
-    flex: 1;
+    flex: 1; /* permite que el texto ocupe la mitad del espacio */
 }
 
 .carta-texto h3 {
-    font-size: 1.5rem;
-    color: #0a2540;
-    margin-bottom: 15px;
+    font-size: 1.5rem; /* tamaño destacado para subtítulos */
+    color: #0a2540; /* color del título del contenido */
+    margin-bottom: 15px; /* espacio debajo del subtítulo */
 }
 
 .carta-texto p {
-    color: #4a5568;
-    line-height: 1.6;
+    color: #4a5568; /* color gris para el párrafo descriptivo */
+    line-height: 1.6; /* altura de línea cómoda para lectura */
 }
 
 /* IMAGEN GRANDE */
 .carta-img {
-    flex: 1;
+    flex: 1; /* permite que la imagen ocupe la otra mitad del espacio */
 }
 
 .carta-img img {
-    width: 100%;
-    max-width: 650px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%; /* imagen ocupa todo el ancho disponible */
+    max-width: 650px; /* límite de ancho para evitar que sea demasiado grande */
+    border-radius: 12px; /* bordes redondeados en la imagen */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* sombra suave alrededor */
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .carta {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* apila texto e imagen en móvil */
+        text-align: center; /* centra el contenido en la carta */
     }
 
     .carta:nth-child(even) {
-        flex-direction: column;
+        flex-direction: column; /* mantiene el mismo orden en móviles */
     }
 
     .carta-img img {
-        max-width: 100%;
+        max-width: 100%; /* la imagen se ajusta al ancho del contenedor */
     }
 }

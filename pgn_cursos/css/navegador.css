@@ -1,89 +1,89 @@
 body {
-    margin: 0;
-    padding-top: 80px;
+    margin: 0; /* elimina el margen predeterminado del navegador */
+    padding-top: 80px; /* deja espacio para el header fijo en la parte superior */
 }
 
 header {
-    background-color: #1a1a2e;
-    padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
+    background-color: #1a1a2e; /* fondo oscuro del encabezado */
+    padding: 15px 0; /* espacio vertical dentro del header */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* sombra sutil debajo del header */
+    position: fixed; /* fija el header en la parte superior al hacer scroll */
+    top: 0; /* posiciona el header en la parte superior */
+    left: 0; /* alinea el header al borde izquierdo */
+    width: 100%; /* header ocupa todo el ancho de la ventana */
+    z-index: 100; /* se ubica por encima del resto del contenido */
 }
 .header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+    max-width: 1200px; /* ancho máximo del contenedor del header */
+    margin: 0 auto; /* centra el contenido dentro del header */
+    display: flex; /* coloca logo y navegación en fila */
+    justify-content: space-between; /* separa los elementos a ambos extremos */
+    align-items: center; /* centra los elementos verticalmente */
+    padding: 0 20px; /* espacio horizontal dentro del header */
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: flex; /* usa flexbox para alinear la imagen y el texto del logo */
+    align-items: center; /* centra verticalmente el contenido del logo */
+    gap: 10px; /* espacio entre el icono y el nombre del logo */
 }
 
 .logo img {
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
+    width: 45px; /* ancho fijo para la imagen del logo */
+    height: 45px; /* alto fijo para la imagen del logo */
+    object-fit: contain; /* mantiene la proporción de la imagen */
 }
 
 .logo h2 {
-    color: #ffffff;
-    font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin: 0;
+    color: #ffffff; /* texto blanco para el nombre del sitio */
+    font-size: 1.4rem; /* tamaño de fuente del logo */
+    font-weight: 700; /* peso fuerte del texto */
+    letter-spacing: 1px; /* espacio entre letras */
+    margin: 0; /* elimina margen predeterminado */
 }
 
 .nav {
-    display: flex;
-    gap: 30px;
+    display: flex; /* alinea los enlaces en fila */
+    gap: 30px; /* espacio entre enlaces de navegación */
 }
 
 .nav a {
-    color: #e0e0e0;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 8px 4px;
-    position: relative;
-    transition: color 0.3s ease;
+    color: #e0e0e0; /* color gris claro de los enlaces */
+    text-decoration: none; /* quita el subrayado */
+    font-size: 1rem; /* tamaño de fuente de los enlaces */
+    font-weight: 500; /* peso medio del texto */
+    padding: 8px 4px; /* espacio interno del enlace */
+    position: relative; /* necesario para el pseudo-elemento decorativo */
+    transition: color 0.3s ease; /* transición suave del color */
 }
 
 .nav a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #e94560;
-    transition: width 0.3s ease;
+    content: ''; /* crea la línea decorativa que aparece al hover */
+    position: absolute; /* posiciona la línea respecto al enlace */
+    bottom: 0; /* ubica la línea en la parte inferior */
+    left: 0; /* alinea la línea al inicio del enlace */
+    width: 0; /* comienza con ancho cero */
+    height: 2px; /* grosor de la línea */
+    background-color: #e94560; /* color rojo/rosado de la línea */
+    transition: width 0.3s ease; /* transición suave de expansión */
 }
 
 .nav a:hover {
-    color: #ffffff;
+    color: #ffffff; /* cambia el color del enlace al pasar el mouse */
 }
 
 .nav a:hover::after {
-    width: 100%;
+    width: 100%; /* expande la línea decorativa bajo el enlace */
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: column; /* apila el contenido del header en móvil */
+        gap: 15px; /* espacio entre filas del header */
     }
 
     .nav {
-        gap: 20px;
+        gap: 20px; /* reduce el espacio entre enlaces en móvil */
     }
 }

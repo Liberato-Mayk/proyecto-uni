@@ -1,50 +1,48 @@
 /* seccion inicio: ocupa toda la pantalla con imagen de fondo */
 .inicio {
     /* el degradado oscuro se pone encima de la imagen para que el texto se lea bien */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('../img/inicio.jpg');
-    background-size: cover;       /* la imagen cubre toda la seccion */
-    background-position: center;  /* la imagen se centra */
-    background-repeat: no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('../img/inicio.jpg'); /* fondo con degradado + imagen */
+    background-size: cover;       /* la imagen cubre toda la sección sin repetir */
+    background-position: center;  /* centra la imagen de fondo */
+    background-repeat: no-repeat; /* evita que la imagen se repita */
 
     height: 100vh; /* ocupa el 100% del alto de la pantalla */
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    display: flex; /* usa flexbox para centrar contenido */
+    flex-direction: column; /* coloca los hijos en columna */
+    align-items: center; /* centra horizontalmente el contenido */
+    justify-content: center; /* centra verticalmente el contenido */
+    text-align: center; /* centra el texto dentro del contenedor */
 }
 
 /* pequeño titulo dorado arriba del titulo grande */
 .inicio-titulo {
-    color: var(--color-dorado);
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+    color: var(--color-dorado); /* color dorado para resaltar el subtítulo */
+    font-size: 14px; /* tamaño pequeño para el subtítulo */
+    font-weight: 600; /* peso de fuente semi-negrita */
+    letter-spacing: 3px; /* espacio entre letras */
+    text-transform: uppercase; /* convierte el texto a mayúsculas */
+    margin-bottom: 20px; /* separa el subtítulo del título principal */
 }
 
 /* titulo grande principal de la portada */
 .inicio-subtitulo {
-    font-family: var(--fuente-titulos);
-    font-size: 55px;
-    max-width: 900px;
-    /* margin: arriba/abajo 0, izquierda/derecha "auto" -> esto centra la caja dentro del contenedor */
-    margin: 0 auto 25px auto;
+    font-family: var(--fuente-titulos); /* fuente especial para el título */
+    font-size: 55px; /* tamaño grande para llamar la atención */
+    max-width: 900px; /* limita el ancho del título para mejor legibilidad */
+    margin: 0 auto 25px auto; /* centra horizontalmente y añade espacio abajo */
 }
 
 /* descripcion debajo del titulo grande */
 .inicio-descripcion {
-    color: var(--color-texto-gris);
-    font-size: 18px;
-    max-width: 650px;
-    /* lo mismo aqui: sin esto, el max-width deja la caja pegada a la izquierda */
-    margin: 0 auto 35px auto;
+    color: var(--color-texto-gris); /* color gris para el texto descriptivo */
+    font-size: 18px; /* tamaño legible para el párrafo */
+    max-width: 650px; /* limita el ancho del párrafo */
+    margin: 0 auto 35px auto; /* centra el párrafo y añade espacio abajo */
 }
 
 /* contenedor de los dos botones, en fila con espacio entre ellos */
 .acciones {
-    display: flex;
-    gap: 20px;
+    display: flex; /* coloca los botones en fila */
+    gap: 20px; /* espacio entre los botones */
 }

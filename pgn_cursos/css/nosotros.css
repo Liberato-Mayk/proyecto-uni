@@ -3,39 +3,39 @@
 =========================*/
 
 .sobre-nosotros{
-    padding:80px 0;
-    background:#ffffff;
+    padding:80px 0; /* espacio arriba y abajo de la sección */
+    background:#ffffff; /* fondo blanco para diferenciar la sección */
 }
 
 .sn-header{
-    text-align:center;
-    max-width:700px;
-    margin:0 auto 55px;
+    text-align:center; /* centra el contenido del encabezado */
+    max-width:700px; /* ancho máximo del bloque del encabezado */
+    margin:0 auto 55px; /* centra el bloque y añade espacio debajo */
 }
 
 .sn-header h2{
-    color:#1a1a2e;
-    font-size:2.5rem;
-    font-weight:800;
-    margin-bottom:15px;
-    position:relative;
-    display:inline-block;
+    color:#1a1a2e; /* color oscuro para el título */
+    font-size:2.5rem; /* tamaño grande del título */
+    font-weight:800; /* peso de fuente extra pesado */
+    margin-bottom:15px; /* separación debajo del título */
+    position:relative; /* necesario para el pseudo-elemento ::after */
+    display:inline-block; /* permite que el pseudo-elemento se ubique correctamente */
 }
 
 .sn-header h2::after{
-    content:'';
-    display:block;
-    width:60px;
-    height:4px;
-    background-color:#e94560;
-    margin:12px auto 0;
-    border-radius:2px;
+    content:''; /* crea una línea decorativa debajo del título */
+    display:block; /* se comporta como bloque para poder ajustar tamaño */
+    width:60px; /* ancho de la línea decorativa */
+    height:4px; /* grosor de la línea */
+    background-color:#e94560; /* color rojo/rosado para la línea */
+    margin:12px auto 0; /* separa la línea del título y la centra */
+    border-radius:2px; /* bordes ligeramente redondeados */
 }
 
 .sn-header p{
-    color:#666;
-    font-size:1.05rem;
-    line-height:1.6;
+    color:#666; /* color gris para el párrafo */
+    font-size:1.05rem; /* tamaño de fuente legible */
+    line-height:1.6; /* mayor interlineado para facilitar lectura */
 }
 
 /*=========================
@@ -43,63 +43,63 @@
 =========================*/
 
 .sn-grid{
-    display:grid;
-    grid-template-columns:1.3fr 1fr;
-    gap:50px;
-    align-items:start;
+    display:grid; /* usa grid layout para organizar el contenido */
+    grid-template-columns:1.3fr 1fr; /* columna principal más ancha y columna secundaria */
+    gap:50px; /* espacio entre columnas */
+    align-items:start; /* alinea las celdas al inicio verticalmente */
 }
 
 /* Texto */
 .sn-texto h3{
-    color:#1d2140;
-    font-size:1.3rem;
-    margin-bottom:12px;
+    color:#1d2140; /* color oscuro para subtítulos */
+    font-size:1.3rem; /* tamaño del subtítulo */
+    margin-bottom:12px; /* espacio debajo del subtítulo */
 }
 
 .sn-texto p{
-    color:#555;
-    font-size:1rem;
-    line-height:1.7;
-    margin-bottom:28px;
+    color:#555; /* color gris para el texto informativo */
+    font-size:1rem; /* tamaño estándar de texto */
+    line-height:1.7; /* más espacio entre líneas para mejor lectura */
+    margin-bottom:28px; /* espacio debajo de cada párrafo */
 }
 
 .sn-texto p:last-child{
-    margin-bottom:0;
+    margin-bottom:0; /* elimina margen en el último párrafo */
 }
 
 /* Estadísticas */
 .sn-stats{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
+    display:grid; /* usa grid para la cuadrícula de estadísticas */
+    grid-template-columns:repeat(2,1fr); /* dos columnas iguales */
+    gap:20px; /* espacio entre tarjetas de estadística */
 }
 
 .stat-card{
-    background:#f7f9fc;
-    border:2px solid #eceef5;
-    border-radius:16px;
-    padding:28px 15px;
-    text-align:center;
-    transition:.3s ease;
+    background:#f7f9fc; /* fondo claro para las tarjetas */
+    border:2px solid #eceef5; /* borde suave alrededor de la tarjeta */
+    border-radius:16px; /* esquinas redondeadas */
+    padding:28px 15px; /* espacio dentro de la tarjeta */
+    text-align:center; /* centra el contenido dentro de la tarjeta */
+    transition:.3s ease; /* transición suave para hover */
 }
 
 .stat-card:hover{
-    border-color:#4b2be3;
-    transform:translateY(-5px);
-    box-shadow:0 12px 25px rgba(75,43,227,.12);
+    border-color:#4b2be3; /* cambia el borde al pasar el mouse */
+    transform:translateY(-5px); /* eleva la tarjeta ligeramente */
+    box-shadow:0 12px 25px rgba(75,43,227,.12); /* sombra destacada en hover */
 }
 
 .stat-card h4{
-    color:#4b2be3;
-    font-size:2rem;
-    font-weight:800;
-    margin-bottom:8px;
+    color:#4b2be3; /* color morado para el número principal */
+    font-size:2rem; /* tamaño grande para la estadística */
+    font-weight:800; /* peso de fuente extra pesado */
+    margin-bottom:8px; /* espacio debajo del número */
 }
 
 .stat-card p{
-    color:#666;
-    font-size:.9rem;
-    margin:0;
+    color:#666; /* color gris para la descripción */
+    font-size:.9rem; /* tamaño de fuente más pequeño */
+    margin:0; /* elimina margen predeterminado */
 }
 
 /*=========================
@@ -108,12 +108,12 @@
 
 @media(max-width:900px){
     .sn-grid{
-        grid-template-columns:1fr;
+        grid-template-columns:1fr; /* una sola columna en pantallas medianas */
     }
 }
 
 @media(max-width:500px){
     .sn-stats{
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:1fr 1fr; /* conserva dos columnas en móviles pequeños si caben */
     }
 }

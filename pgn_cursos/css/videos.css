@@ -3,22 +3,22 @@
 =========================*/
 
 .lista-cursos{
-    padding: 80px 0;
-    background: #f7f9fc;
+    padding: 80px 0; /* espacio arriba y abajo de la sección */
+    background: #f7f9fc; /* fondo claro para separar la sección del resto */
 }
 
 .lista-cursos h2{
-    text-align: center;
-    font-size: 2.5rem;
-    color: #1d2140;
-    margin-bottom: 15px;
+    text-align: center; /* centra el título */
+    font-size: 2.5rem; /* tamaño grande para el título */
+    color: #1d2140; /* color oscuro del texto */
+    margin-bottom: 15px; /* separación debajo del título */
 }
 
 .lista-cursos p{
-    text-align: center;
-    color: #666;
-    margin-bottom: 45px;
-    font-size: 1.05rem;
+    text-align: center; /* centra el párrafo descriptivo */
+    color: #666; /* color gris para el texto secundario */
+    margin-bottom: 45px; /* espacio debajo del párrafo */
+    font-size: 1.05rem; /* tamaño de fuente legible */
 }
 
 /*=========================
@@ -26,9 +26,9 @@
 =========================*/
 
 .cursos-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:30px;
+    display:grid; /* usa grid para organizar las tarjetas */
+    grid-template-columns:repeat(4,1fr); /* 4 columnas iguales */
+    gap:30px; /* espacio entre tarjetas */
 }
 
 /*=========================
@@ -36,19 +36,19 @@
 =========================*/
 
 .curso-card{
-    background:#fff;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.35s;
-    display:flex;
-    flex-direction:column;
-    height:100%;
+    background:#fff; /* fondo blanco de la tarjeta */
+    border-radius:18px; /* esquinas redondeadas */
+    overflow:hidden; /* evita que el contenido se salga de la tarjeta */
+    box-shadow:0 10px 25px rgba(0,0,0,.08); /* sombra suave alrededor */
+    transition:.35s; /* transición suave al hacer hover */
+    display:flex; /* usa flexbox para el contenido interno */
+    flex-direction:column; /* organiza el contenido en columna */
+    height:100%; /* hace que la tarjeta ocupe toda la altura disponible */
 }
 
 .curso-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 20px 35px rgba(0,0,0,.15);
+    transform:translateY(-8px); /* eleva la tarjeta al pasar el mouse */
+    box-shadow:0 20px 35px rgba(0,0,0,.15); /* sombra más fuerte en hover */
 }
 
 /*=========================
@@ -56,33 +56,33 @@
 =========================*/
 
 .curso-card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-    display:block;
+    width:100%; /* la imagen ocupa todo el ancho de la tarjeta */
+    height:200px; /* altura fija para las imágenes */
+    object-fit:cover; /* recorta la imagen para mantener proporción */
+    display:block; /* elimina espacio extra inferior */
 }
 /*=========================
       CONTENIDO
 =========================*/
 .curso-info{
-    padding:20px;
-    display:flex;
-    flex-direction:column;
-    flex:1;
+    padding:20px; /* espacio interno del contenido */
+    display:flex; /* usa flexbox para el contenido */
+    flex-direction:column; /* organiza texto y botón en columna */
+    flex:1; /* hace que el contenido crezca para llenar la tarjeta */
 }
 
 .curso-info h3{
-    font-size:1.25rem;
-    color:#1d2140;
-    margin-bottom:10px;
+    font-size:1.25rem; /* tamaño del título del curso */
+    color:#1d2140; /* color oscuro para el título */
+    margin-bottom:10px; /* espacio debajo del título */
 }
 
 .curso-info p{
-    color:#666;
-    margin-bottom:22px;
-    font-size:.95rem;
-    text-align:left;
-    flex:1;
+    color:#666; /* color gris para la descripción */
+    margin-bottom:22px; /* espacio debajo del párrafo */
+    font-size:.95rem; /* tamaño de fuente estándar */
+    text-align:left; /* alinea el texto a la izquierda */
+    flex:1; /* permite que la descripción ocupe espacio disponible */
 }
 
 /*=========================
@@ -90,23 +90,21 @@
 =========================*/
 
 .curso-info a{
-    display:inline-block;
-    width:100%;
-    box-sizing:border-box;
-    text-align:center;
-    text-decoration:none;
-    background:#4b2be3;
-    color:#fff;
-    padding:12px;
-    border-radius:10px;
-    font-weight:bold;
-    transition:.3s;
+    display:inline-block; /* se comporta como botón */
+    width:100%; /* ocupa todo el ancho disponible */
+    box-sizing:border-box; /* incluye padding en el ancho total */
+    text-align:center; /* centra el texto dentro del botón */
+    text-decoration:none; /* quita subrayado */
+    background:#4b2be3; /* fondo morado del botón */
+    color:#fff; /* texto blanco */
+    padding:12px; /* espacio interno del botón */
+    border-radius:10px; /* esquinas redondeadas */
+    font-weight:bold; /* texto en negrita */
+    transition:.3s; /* transición suave en hover */
 }
 
 .curso-info a:hover{
-
-    background:#2e0fd4;
-
+    background:#2e0fd4; /* cambia el color de fondo al pasar el mouse */
 }
 
 /*=========================
@@ -114,16 +112,14 @@
 =========================*/
 
 .tech-item.activo{
-    background:#4b2be3;
-    color:white;
-    border-color:#4b2be3;
-    transform:scale(1.05);
+    background:#4b2be3; /* fondo activo morado */
+    color:white; /* texto blanco */
+    border-color:#4b2be3; /* borde del mismo color */
+    transform:scale(1.05); /* escala ligeramente el elemento activo */
 }
 
 .tech-item.activo img{
-
-    filter:none;
-
+    filter:none; /* elimina filtros en la imagen del elemento activo */
 }
 
 /*=========================
@@ -131,32 +127,19 @@
 =========================*/
 
 @media(max-width:1200px){
-
 .cursos-grid{
-
-grid-template-columns:repeat(3,1fr);
-
+    grid-template-columns:repeat(3,1fr); /* 3 columnas en pantallas medianas */
 }
-
 }
 
 @media(max-width:850px){
-
 .cursos-grid{
-
-grid-template-columns:repeat(2,1fr);
-
+    grid-template-columns:repeat(2,1fr); /* 2 columnas en tablets y pantallas pequeñas */
 }
-
 }
 
 @media(max-width:550px){
-
 .cursos-grid{
-
-grid-template-columns:1fr;
-
+    grid-template-columns:1fr; /* 1 columna en móviles pequeños */
 }
-
 }
-

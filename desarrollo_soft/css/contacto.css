@@ -1,40 +1,40 @@
 /*CONTACTO*/
 
 .contacto{
-    padding: 10px 0;
-    background: #f5f9ff;
+    padding: 10px 0; /* espacio vertical arriba y abajo */
+    background: #f5f9ff; /* fondo suave para el bloque de contacto */
 }
 
 .personalisado{
-    width: 100%;
-    max-width: 950px;
-    margin: auto;
-    background: #fff;
-    padding: 45px;
-    border-radius: 18px;
-    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+    width: 100%; /* ocupa todo el ancho disponible */
+    max-width: 950px; /* ancho máximo para no estirar en pantallas grandes */
+    margin: auto; /* centra el contenedor horizontalmente */
+    background: #fff; /* fondo blanco para la tarjeta */
+    padding: 45px; /* espacio interno alrededor del contenido */
+    border-radius: 18px; /* esquinas redondeadas */
+    box-shadow: 0 15px 35px rgba(0,0,0,.25); /* sombra suave alrededor */
 }
 
 .personalisado h3{
-    text-align: center;
-    font-size: 2.5rem;
-    color: #0a2f5a;
-    margin-bottom: 15px;
+    text-align: center; /* centra el título */
+    font-size: 2.5rem; /* tamaño grande para el encabezado */
+    color: #0a2f5a; /* tono azul oscuro para el título */
+    margin-bottom: 15px; /* separación debajo del título */
 }
 
 .personalisado>p{
-    text-align: center;
-    color: #666;
-    line-height: 1.7;
-    margin-bottom: 40px;
+    text-align: center; /* centra el texto descriptivo */
+    color: #666; /* color gris medio para el texto */
+    line-height: 1.7; /* altura de línea cómoda para lectura */
+    margin-bottom: 40px; /* espacio debajo del párrafo */
 }
 
 /*FORMULARIO*/
 
 .personalisado form{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    display: grid; /* usa grid para ordenar los campos */
+    grid-template-columns: 1fr 1fr; /* dos columnas de igual ancho */
+    gap: 20px; /* espacio entre campos */
 }
 
 /* Campos que ocupan toda la fila */
@@ -43,16 +43,16 @@
 .personalisado button,
 .personalisado input[type=file],
 .personalisado select[name=tiempo]{
-    grid-column: 1/3;
+    grid-column: 1/3; /* estos elementos abarcan ambas columnas */
 }
 
 /* Etiquetas */
 
 .personalisado label{
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #333;
+    display: block; /* etiqueta en bloque para ocupar toda la fila */
+    margin-bottom: 8px; /* espacio debajo de la etiqueta */
+    font-weight: 600; /* texto de etiqueta más visible */
+    color: #333; /* color oscuro para buena legibilidad */
 }
 
 /* Inputs */
@@ -60,143 +60,138 @@
 .personalisado input,
 .personalisado select,
 .personalisado textarea{
-    width: 100%;
-    padding: 13px 15px;
-    border: 1px solid #d9d9d9;
-    border-radius: 10px;
-    font-size: 15px;
-    outline: none;
-    transition: .3s;
-    background: #fafafa;
+    width: 100%; /* campo ocupa todo el ancho disponible */
+    padding: 13px 15px; /* espacio interno dentro del campo */
+    border: 1px solid #d9d9d9; /* borde claro y suave */
+    border-radius: 10px; /* esquinas redondeadas */
+    font-size: 15px; /* tamaño de texto legible */
+    outline: none; /* elimina el borde de foco del navegador */
+    transition: .3s; /* transición suave para cambios de estado */
+    background: #fafafa; /* fondo claro para el campo */
 }
 
 .personalisado input:focus,
 .personalisado select:focus,
 .personalisado textarea:focus{
-    border-color: #00bfff;
-    box-shadow: 0 0 8px rgba(0,191,255,.3);
-    background: #fff;
+    border-color: #00bfff; /* borde azul al enfocar */
+    box-shadow: 0 0 8px rgba(0,191,255,.3); /* brillo azul suave */
+    background: #fff; /* fondo blanco al enfocar */
 }
 
 .personalisado textarea{
-    resize: vertical;
-    min-height: 130px;
+    resize: vertical; /* permite cambiar altura del textarea */
+    min-height: 130px; /* altura mínima para más espacio de texto */
 }
 
 /*CHECKBOX*/
 
 .personalisado input[type=checkbox]{
-    width: auto;
-    margin-right: 8px;
+    width: auto; /* permite un ancho natural para la casilla */
+    margin-right: 8px; /* espacio entre checkbox y texto */
 }
 
 .personalisado label:has(input[type=checkbox]){
-    display: flex;
-    align-items: center;
-    font-weight: normal;
-    margin-bottom: 8px;
+    display: flex; /* organiza checkbox y texto en fila */
+    align-items: center; /* alinea verticalmente */
+    font-weight: normal; /* peso normal para el texto */
+    margin-bottom: 8px; /* espacio debajo de cada opción */
 }
 
 /*BOTÓN*/
 
 .btnEnviar{
-    width: 100%;
-    padding: 15px;
-    background: linear-gradient(135deg,#00bfff,#0066ff);
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    font-size: 17px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: .3s;
+    width: 100%; /* botón ocupa todo el ancho disponible */
+    padding: 15px; /* espacio interno para clic cómodo */
+    background: linear-gradient(135deg,#00bfff,#0066ff); /* degradado azul */
+    color: #fff; /* texto blanco del botón */
+    border: none; /* sin borde visible */
+    border-radius: 10px; /* esquinas redondeadas */
+    font-size: 17px; /* texto de botón legible */
+    font-weight: bold; /* texto de botón destacado */
+    cursor: pointer; /* cursor de mano al pasar sobre el botón */
+    transition: .3s; /* transición suave en hover */
 }
 
 .btnEnviar:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,191,255,.35);
+    transform: translateY(-3px); /* eleva el botón al hover */
+    box-shadow: 0 8px 20px rgba(0,191,255,.35); /* sombra azul suave */
 }
 
 .campo{
-    display:flex;
-    flex-direction:column;
+    display:flex; /* usa flexbox para apilar etiquetas y campos */
+    flex-direction:column; /* columna vertical */
 }
 
 .campo-completo{
-    grid-column:1 / 3;
+    grid-column:1 / 3; /* ocupa las dos columnas del grid */
 }
 
 .checks{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px 30px;
-    margin-top:10px;
+    display:grid; /* grilla para las opciones de checkbox */
+    grid-template-columns:repeat(2,1fr); /* dos columnas iguales */
+    gap:12px 30px; /* espacio vertical y horizontal */
+    margin-top:10px; /* espacio encima del grupo */
 }
 
 .checks label{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    cursor:pointer;
-    font-weight:500;
+    display:flex; /* checkbox y texto en fila */
+    align-items:center; /* centra verticalmente */
+    gap:10px; /* separación entre checkbox y texto */
+    cursor:pointer; /* cursor de mano para el label */
+    font-weight:500; /* peso ligeramente más fuerte */
 }
 
 .checks input{
-    width:18px;
-    height:18px;
+    width:18px; /* tamaño de la casilla */
+    height:18px; /* altura de la casilla */
 }
 
 .botones{
-    display:flex;
-    gap:20px;
+    display:flex; /* organiza botones en fila */
+    gap:20px; /* espacio entre botones */
 }
 
 .btnEnviar,
 .btnLimpiar{
-    flex:1;
-    padding:15px;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-    font-size:16px;
-    transition:.3s;
+    flex:1; /* ambos botones se expanden por igual */
+    padding:15px; /* espacio interno consistente */
+    border:none; /* sin borde visible */
+    border-radius:10px; /* esquinas redondeadas */
+    cursor:pointer; /* cursor de mano */
+    font-size:16px; /* tamaño de texto del botón */
+    transition:.3s; /* transición suave en hover */
 }
 
 .btnEnviar{
-    background:#0077ff;
-    color:#fff;
+    background:#0077ff; /* color azul sólido del botón enviar */
+    color:#fff; /* texto blanco */
 }
 
 .btnEnviar:hover{
-    background:#005fd1;
+    background:#005fd1; /* azul más oscuro al pasar el mouse */
 }
 
 .btnLimpiar{
-    background:#ececec;
+    background:#ececec; /* color gris claro para el botón limpiar */
 }
 
 .btnLimpiar:hover{
-    background:#d8d8d8;
+    background:#d8d8d8; /* gris oscuro al hover */
 }
 
 /*   RESPONSIVE*/
 
 @media(max-width:768px){
-
     .personalisado{
-        padding:30px;
+        padding:30px; /* reduce el padding en dispositivos pequeños */
     }
-
     .personalisado form{
-        display:block;
+        display:block; /* apila los campos en una sola columna */
     }
-
     .personalisado label{
-        margin-top:18px;
+        margin-top:18px; /* separa las etiquetas en móvil */
     }
-
     .btnEnviar{
-        margin-top:20px;
+        margin-top:20px; /* espacio extra arriba del botón */
     }
-
 }

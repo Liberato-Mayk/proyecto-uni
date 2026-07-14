@@ -1,71 +1,72 @@
+/* Contenedor del grid de tecnologías */
 .tech-grid {
-    margin: 40px 0;
+    margin: 40px 0; /* espacio vertical arriba y abajo del bloque */
 }
 
 .tech-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    max-width: 950px;
-    margin: 0 auto;
+    display: flex; /* distribuye los elementos en fila */
+    flex-wrap: wrap; /* permite que los elementos salten a una nueva línea */
+    justify-content: center; /* centra los elementos horizontalmente */
+    gap: 15px; /* separa los ítems entre sí */
+    max-width: 950px; /* limita el ancho máximo del contenedor */
+    margin: 0 auto; /* centra el contenedor en la página */
 }
 
 .tech-item {
-    background-color: #16213e;
-    color: #ffffff;
-    border: 2px solid #4b3f8a;
-    border-radius: 30px;
-    padding: 12px 22px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    background-color: #16213e; /* fondo oscuro para cada etiqueta */
+    color: #ffffff; /* texto blanco dentro del ítem */
+    border: 2px solid #4b3f8a; /* contorno morado suave */
+    border-radius: 30px; /* bordes redondeados para estilo de píldora */
+    padding: 12px 22px; /* espacio interno arriba/abajo y a los lados */
+    display: flex; /* permite alinear icono y texto */
+    align-items: center; /* centra verticalmente el contenido */
+    gap: 10px; /* espacio entre icono y texto */
+    font-size: 1rem; /* tamaño de fuente estándar */
+    font-weight: 600; /* texto ligeramente más grueso */
+    cursor: pointer; /* cursor de mano para indicar clic /
+    transition: all 0.3s ease; /* transición suave para hover */
 }
 
 .tech-item img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
+    width: 24px; /* ancho fijo del icono */
+    height: 24px; /* alto fijo del icono */
+    object-fit: contain; /* mantiene la proporción de la imagen */
 }
 
 .tech-item:hover {
-    border-color: #e94560;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(233, 69, 96, 0.25);
+    border-color: #e94560; /* cambia el borde al pasar el cursor */
+    transform: translateY(-3px); /* eleva ligeramente el ítem */
+    box-shadow: 0 6px 15px rgba(233, 69, 96, 0.25); /* sombra suave al hover */
 }
 
-/* Card de curso */
+/* Estilos del bloque principal de cursos */
 .cursos {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
+    text-align: center; /* centra el texto dentro del bloque */
+    max-width: 700px; /* ancho máximo del bloque */
+    margin: 0 auto; /* centra el bloque en la página */
 }
 
 .cursos h2 {
-    color: #1a1a2e;
-    font-size: 2.2rem;
-    font-weight: 800;
-    margin-bottom: 12px;
-    position: relative;
-    display: inline-block;
+    color: #1a1a2e; /* color oscuro para el título */
+    font-size: 2.2rem; /* tamaño grande para destacar el título */
+    font-weight: 800; /* peso de fuente extra fuerte */
+    margin-bottom: 12px; /* espacio debajo del título */
+    position: relative; /* permite pseudo-elementos decorativos */
+    display: inline-block; /* el ancho se ajusta al contenido */
 }
 
 .cursos h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: #e94560;
-    margin: 12px auto 0;
-    border-radius: 2px;
+    content: ''; /* crea una línea decorativa debajo del título */
+    display: block; /* hace que el pseudo-elemento sea un bloque */
+    width: 60px; /* ancho de la línea decorativa */
+    height: 4px; /* altura de la línea */
+    background-color: #e94560; /* color rojo para el detalle */
+    margin: 12px auto 0; /* separa la línea del título y la centra */
+    border-radius: 2px; /* bordes ligeramente redondeados */
 }
 
 .cursos p {
-    color: #555;
-    font-size: 1.05rem;
-    line-height: 1.6;
+    color: #555; /* color gris para el texto descriptivo */
+    font-size: 1.05rem; /* tamaño de fuente legible */
+    line-height: 1.6; /* altura de línea para mejor lectura */
 }

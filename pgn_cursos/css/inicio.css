@@ -1,53 +1,50 @@
 .contenedor {
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
+    max-width: 1200px; /* ancho máximo del contenedor */
+    margin: 0 auto; /* centra el bloque horizontalmente */
+    width: 100%; /* ocupa todo el ancho disponible */
+    padding: 0 20px; /* espacio lateral interno */
+    box-sizing: border-box; /* incluye el padding en el ancho total */
 }
 
 section:has(.inicio) {
-    background: url('../img/fondo.png') no-repeat center center/cover;
-    min-height: calc(100vh - 80px); /* resta la altura del header fijo */
-    display: flex;
-    align-items: center;
+    background: url('../img/fondo.png') no-repeat center center/cover; /* imagen de fondo centrada y ajustada */
+    min-height: calc(100vh - 80px); /* altura mínima restando el header fijo */
+    display: flex; /* usa flexbox para centrar el contenido */
+    align-items: center; /* centra verticalmente el contenido */
 }
 
 .inicio {
-    max-width: 600px;
-    text-align: left;
+    max-width: 600px; /* ancho máximo del bloque de texto */
+    text-align: left; /* alinea el texto a la izquierda */
 }
 
 .inicio h1 {
-    color: #ffffff;
-    font-size: 3rem;
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 20px;
+    color: #ffffff; /* título en blanco */
+    font-size: 3rem; /* tamaño grande para el encabezado principal */
+    font-weight: 800; /* peso de fuente extra fuerte */
+    line-height: 1.2; /* altura de línea ajustada */
+    margin-bottom: 20px; /* espacio debajo del título */
 }
 
 .inicio p {
-    color: #d1d1d1;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    max-width: 500px;
+    color: #d1d1d1; /* texto descriptivo en gris claro */
+    font-size: 1.1rem; /* tamaño de fuente legible */
+    line-height: 1.6; /* separación entre líneas para mejor lectura */
+    max-width: 500px; /* ancho máximo del párrafo */
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .inicio h1 {
-        font-size: 2.2rem;
+        font-size: 2.2rem; /* reduce el título en pantallas pequeñas */
     }
-
     .inicio p {
-        font-size: 1rem;
+        font-size: 1rem; /* reduce el tamaño del párrafo en móvil */
     }
-
     section:has(.inicio) {
         min-height: 60vh;
         text-align: center;
     }
-
     .inicio {
         text-align: center;
         margin: 0 auto;

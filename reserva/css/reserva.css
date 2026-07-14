@@ -5,167 +5,167 @@
 
 /* separacion arriba y abajo de la seccion */
 .reserva {
-    padding: 100px 0;
+    padding: 100px 0; /* espacio superior e inferior de la sección de reserva */
 }
 
 /* el contenido se divide en 2 columnas: info a la izquierda y formulario a la derecha */
 .cont-reserva {
-    display: flex;
-    gap: 60px;
+    display: flex; /* pone los elementos en fila */
+    gap: 60px; /* espacio entre columna de info y formulario */
 }
 
 /* columna izquierda: texto informativo */
 .reserva-info {
-    flex: 1;
+    flex: 1; /* permite que la columna izquierda ocupe espacio flexible */
 }
 
 .reserva-info p {
-    color: var(--color-texto-gris);
-    margin: 15px 0 25px 0;
+    color: var(--color-texto-gris); /* color de texto secundario */
+    margin: 15px 0 25px 0; /* separa párrafos arriba y abajo */
 }
 
 /* lista de garantias (confirmacion inmediata, cancelacion gratuita, etc) */
 .garantias {
-    list-style: none; /* quitamos los puntos de la lista */
-    margin-bottom: 35px;
+    list-style: none; /* quita los puntos predeterminados de la lista */
+    margin-bottom: 35px; /* distancia debajo de la lista */
 }
 
 .garantias li {
-    color: var(--color-texto-gris);
-    margin-bottom: 12px;
+    color: var(--color-texto-gris); /* color del texto de cada garantía */
+    margin-bottom: 12px; /* espacio entre cada elemento de la lista */
 }
 
 /* bloque de contacto (telefono y correo) */
 .contacto p {
-    color: var(--color-texto-gris);
-    margin-bottom: 10px;
+    color: var(--color-texto-gris); /* color gris para el texto descriptivo */
+    margin-bottom: 10px; /* separación debajo del párrafo */
 }
 
 /* los links de telefono y correo se muestran uno debajo del otro */
 .contacto a {
-    display: block;
-    color: var(--color-blanco);
-    margin-bottom: 8px;
-    transition: 0.3s;
+    display: block; /* cada enlace ocupa toda la línea */
+    color: var(--color-blanco); /* color blanco para los enlaces */
+    margin-bottom: 8px; /* espacio entre enlaces */
+    transition: 0.3s; /* efecto suave al pasar el cursor */
 }
 
 .contacto a:hover {
-    color: var(--color-dorado);
+    color: var(--color-dorado); /* cambia el color al pasar el cursor */
 }
 
 /* columna derecha: formulario, con fondo propio para diferenciarlo */
 .formulario-reserva {
-    flex: 1;
-    background-color: #141414;
-    border: 1px solid #262626;
-    border-radius: 10px;
-    padding: 40px;
+    flex: 1; /* permite que el formulario crezca y ocupe el mismo ancho que la info */
+    background-color: #141414; /* fondo oscuro del formulario */
+    border: 1px solid #262626; /* borde gris oscuro */
+    border-radius: 10px; /* esquinas redondeadas */
+    padding: 40px; /* espacio interior del formulario */
 }
 
 /* cada fila del formulario: 2 campos uno al lado del otro */
 .linea-formulario {
-    display: flex;
-    gap: 20px;
+    display: flex; /* posiciona los campos en fila */
+    gap: 20px; /* separa los campos entre sí */
 }
 
 /* cada grupo individual de campo (label + input) */
 .form-grupo {
-    flex: 1; /* para que los 2 campos de una linea ocupen el mismo espacio */
-    margin-bottom: 20px;
+    flex: 1; /* cada campo ocupa el mismo ancho dentro de la fila */
+    margin-bottom: 20px; /* espacio debajo de cada grupo */
 }
 
 /* etiqueta de cada campo (ej: "Nombre completo *") */
 .form-grupo label {
-    display: block;
-    font-size: 13px;
-    color: var(--color-texto-gris);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
+    display: block; /* el label se muestra como bloque */
+    font-size: 13px; /* tamaño de letra del label */
+    color: var(--color-texto-gris); /* color gris para el label */
+    text-transform: uppercase; /* texto en mayúsculas */
+    letter-spacing: 1px; /* espacio entre letras */
+    margin-bottom: 8px; /* separación del campo siguiente */
 }
 
 /* estilo comun para los campos de texto, select y textarea */
 .form-grupo input,
 .form-grupo select,
 .form-grupo textarea {
-    width: 100%;
-    background-color: #0a0a0a;
-    border: 1px solid #333333;
-    border-radius: 6px;
-    padding: 12px 14px;
-    color: var(--color-blanco);
-    font-family: var(--fuente-texto);
-    font-size: 14px;
+    width: 100%; /* ocupa todo el ancho disponible */
+    background-color: #0a0a0a; /* fondo oscuro del campo */
+    border: 1px solid #333333; /* borde gris oscuro */
+    border-radius: 6px; /* esquinas levemente redondeadas */
+    padding: 12px 14px; /* relleno interno del campo */
+    color: var(--color-blanco); /* texto blanco dentro del campo */
+    font-family: var(--fuente-texto); /* tipografía del formulario */
+    font-size: 14px; /* tamaño de letra del campo */
 }
 
 /* el textarea no se puede estirar horizontalmente, solo verticalmente */
 .form-grupo textarea {
-    resize: vertical;
+    resize: vertical; /* permite ajustar alto pero no ancho */
 }
 
 /* borde dorado cuando el usuario hace clic en un campo */
 .form-grupo input:focus,
 .form-grupo select:focus,
 .form-grupo textarea:focus {
-    outline: none;
-    border-color: var(--color-dorado);
+    outline: none; /* quita el contorno predeterminado */
+    border-color: var(--color-dorado); /* resalta el campo activo */
 }
 
 /* mensaje de error debajo de un campo (se llena con javascript) */
 .form-error {
-    display: block;
-    color: #e05252;
-    font-size: 12px;
-    margin-top: 5px;
+    display: block; /* se muestra como bloque debajo del campo */
+    color: #e05252; /* color rojo para el error */
+    font-size: 12px; /* tamaño de letra más pequeño */
+    margin-top: 5px; /* espacio por encima del mensaje */
 }
 
 /* boton que ocupa todo el ancho del formulario */
 .btn-full {
-    width: 100%;
-    border: none;
-    font-size: 15px;
-    cursor: pointer;
+    width: 100%; /* ocupa todo el ancho disponible */
+    border: none; /* quita el borde predeterminado */
+    font-size: 15px; /* tamaño de letra del botón */
+    cursor: pointer; /* cambia el cursor al pasar sobre el botón */
 }
 
 /* mensaje de exito que aparece cuando se envia el formulario */
 .form-suceso {
-    background-color: rgba(46, 204, 113, 0.1);
-    border: 1px solid #2ecc71;
-    border-radius: 8px;
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
+    background-color: rgba(46, 204, 113, 0.1); /* fondo verde claro */
+    border: 1px solid #2ecc71; /* borde verde */
+    border-radius: 8px; /* esquinas redondeadas */
+    padding: 20px; /* espacio interno del mensaje */
+    margin-top: 20px; /* separación arriba del mensaje */
+    text-align: center; /* centra el texto */
 }
 
 .form-suceso p {
-    color: var(--color-texto-gris);
-    margin-top: 8px;
+    color: var(--color-texto-gris); /* color gris para el texto del mensaje */
+    margin-top: 8px; /* espacio superior al párrafo */
 }
 
 .success-icon {
-    font-size: 24px;
-    display: block;
-    margin-bottom: 8px;
+    font-size: 24px; /* tamaño del icono de éxito */
+    display: block; /* ocupa su propia línea */
+    margin-bottom: 8px; /* separación debajo del icono */
 }
 
 /* mensaje de error general que aparece si algo falla al enviar (reemplaza el alert() feo) */
 .form-error-general {
-    background-color: rgba(224, 82, 82, 0.1);
-    border: 1px solid #e05252;
-    border-radius: 8px;
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
+    background-color: rgba(224, 82, 82, 0.1); /* fondo rojo claro */
+    border: 1px solid #e05252; /* borde rojo */
+    border-radius: 8px; /* esquinas redondeadas */
+    padding: 20px; /* espacio interno */
+    margin-top: 20px; /* separación arriba del mensaje */
+    text-align: center; /* centra el contenido */
 }
 
 .form-error-general p {
-    color: var(--color-texto-gris);
-    margin-top: 8px;
+    color: var(--color-texto-gris); /* color gris para el texto del error */
+    margin-top: 8px; /* separación arriba del párrafo */
 }
 
 /* icono de error, mismo estilo que el icono de exito pero para errores */
 .error-icon {
-    font-size: 24px;
-    display: block;
-    margin-bottom: 8px;
+    font-size: 24px; /* tamaño del icono de error */
+    display: block; /* ocupa su propia línea */
+    margin-bottom: 8px; /* separación debajo del icono */
 }

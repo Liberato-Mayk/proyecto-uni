@@ -5,54 +5,54 @@
 
 /* el header queda fijo arriba de la pantalla siempre visible */
 header {
-    background-color: #000000;
+    background-color: #000000; /* fondo negro para el encabezado */
     position: fixed; /* se queda pegado arriba aunque se haga scroll */
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 0; /* posiciona el header en la parte superior */
+    left: 0; /* alinea el header al borde izquierdo */
+    width: 100%; /* ocupa todo el ancho de la ventana */
     z-index: 100; /* para que quede por encima de las demas secciones */
 }
 
 /* contenedor del menu: acomoda el logo a la izquierda y los links a la derecha */
 .nav-contenedor {
-    width: 90%;
-    max-width: 1300px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 0;
+    width: 90%; /* ancho relativo para dejar espacio lateral */
+    max-width: 1300px; /* ancho máximo para pantallas grandes */
+    margin: 0 auto; /* centra horizontalmente el contenedor */
+    display: flex; /* coloca logo y menú en fila */
+    align-items: center; /* centra verticalmente los elementos */
+    justify-content: space-between; /* separa el logo y el menú */
+    padding: 20px 0; /* espacio arriba y abajo dentro del header */
 }
 
 /* estilo del logo "Luxe Hotels" */
 .logo {
-    font-family: var(--fuente-titulos);
-    font-size: 22px;
-    color: var(--color-dorado);
-    font-weight: 600;
+    font-family: var(--fuente-titulos); /* fuente personalizada para el logo */
+    font-size: 22px; /* tamaño de letra del logo */
+    color: var(--color-dorado); /* color dorado del logo */
+    font-weight: 600; /* peso de fuente semi-negrita */
 }
 
 /* contenedor de los links del menu, en fila */
 .nav-menu {
-    display: flex;
-    gap: 35px; /* separacion entre cada link */
-    align-items: center;
+    display: flex; /* alinea los enlaces en fila */
+    gap: 35px; /* espacio entre cada enlace */
+    align-items: center; /* centra los enlaces verticalmente */
 }
 
 /* estilo de cada link del menu */
 .nav-link {
-    color: var(--color-blanco);
-    font-size: 15px;
-    font-weight: 500;
-    transition: 0.3s;
+    color: var(--color-blanco); /* color blanco de los enlaces */
+    font-size: 15px; /* tamaño de fuente de los enlaces */
+    font-weight: 500; /* peso de fuente medio */
+    transition: 0.3s; /* transición suave en hover */
 }
 
 /* efecto al pasar el mouse por un link */
 .nav-link:hover {
-    color: var(--color-dorado);
+    color: var(--color-dorado); /* cambia a dorado al pasar el cursor */
 }
 
 /* estilo especial para el boton "Reservar" dentro del menu */
 .nav-menu .btn-primary {
-    padding: 10px 22px; /* un poco mas pequeño que los botones normales */
+    padding: 10px 22px; /* un poco más pequeño que los botones normales */
 }

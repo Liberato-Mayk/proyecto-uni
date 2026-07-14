@@ -5,136 +5,136 @@
 
 /* separacion arriba y abajo de la seccion */
 .hoteles {
-    padding: 100px 0;
+    padding: 100px 0; /* espacio superior e inferior de la sección hoteles */
 }
 
 /* cuadricula de las tarjetas: 2 columnas que pasan a 1 en pantallas chicas */
 .hoteles-grid {
-    display: flex;
-    flex-wrap: wrap; /* si no caben 2 tarjetas por fila, bajan de linea */
-    gap: 30px;
+    display: flex; /* usa flexbox para alinear las tarjetas en fila */
+    flex-wrap: wrap; /* permite que las tarjetas bajen de línea si no caben */
+    gap: 30px; /* espacio entre tarjetas */
 }
 
 /* cada tarjeta de hotel */
 .hotel-card {
-    background-color: #141414;
-    border: 1px solid #262626;
-    border-radius: 10px;
-    overflow: hidden; /* para que la imagen no se salga de los bordes redondeados */
+    background-color: #141414; /* fondo oscuro de la tarjeta */
+    border: 1px solid #262626; /* borde tenue alrededor de la tarjeta */
+    border-radius: 10px; /* esquinas redondeadas de la tarjeta */
+    overflow: hidden; /* evita que el contenido sobresalga de las esquinas */
 
     /* con esto entran 2 tarjetas por fila, restando el espacio del gap */
-    flex: 1 1 calc(50% - 30px);
+    flex: 1 1 calc(50% - 30px); /* ancho flexible para dos tarjetas por fila */
 }
 
 /* contenedor de la imagen de cada hotel, relativo para poder poner la etiqueta encima */
 .hotel-card .cont-img {
-    position: relative;
+    position: relative; /* permite posicionar el nombre del hotel con absolute */
 }
 
 /* imagen del hotel */
 .hotel-img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover; /* la imagen se recorta pero mantiene su proporcion */
+    width: 100%; /* ocupa todo el ancho del contenedor */
+    height: 260px; /* altura fija de la imagen */
+    object-fit: cover; /* recorta la imagen para llenar el área manteniendo proporción */
 }
 
 /* etiqueta (ej: "Montaña", "Destacado") que va arriba a la izquierda de la imagen */
 .hotel-nombre {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border: 1px solid var(--color-dorado);
-    color: var(--color-dorado);
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 6px 14px;
-    border-radius: 20px;
+    position: absolute; /* posiciona la etiqueta sobre la imagen */
+    top: 20px; /* separación superior de la etiqueta */
+    left: 20px; /* separación izquierda de la etiqueta */
+    background-color: rgba(0, 0, 0, 0.6); /* fondo semitransparente para legibilidad */
+    border: 1px solid var(--color-dorado); /* borde dorado alrededor de la etiqueta */
+    color: var(--color-dorado); /* texto dorado */
+    font-size: 12px; /* tamaño pequeño del texto */
+    font-weight: 600; /* peso de fuente seminegrita */
+    letter-spacing: 1px; /* espacio entre letras */
+    text-transform: uppercase; /* mayúsculas para el texto */
+    padding: 6px 14px; /* relleno dentro de la etiqueta */
+    border-radius: 20px; /* bordes redondeados de la etiqueta */
 }
 
 /* contenedor del texto de cada tarjeta, con espacio interno */
 .hotel-card .cont-text {
-    padding: 30px;
+    padding: 30px; /* relleno interno del contenedor de texto */
 }
 
 /* estrellas de calificacion */
 .calificacion {
-    color: var(--color-dorado);
-    margin-bottom: 10px;
+    color: var(--color-dorado); /* color dorado para las estrellas */
+    margin-bottom: 10px; /* espacio debajo de las estrellas */
 }
 
 /* titulo del hotel */
 .hotel-card h3 {
-    font-family: var(--fuente-titulos);
-    font-size: 24px;
-    margin-bottom: 8px;
+    font-family: var(--fuente-titulos); /* fuente de título para el nombre del hotel */
+    font-size: 24px; /* tamaño de fuente del título */
+    margin-bottom: 8px; /* espacio debajo del título */
 }
 
 /* ubicacion del hotel (ej: Bariloche, Argentina) */
 .localizacion {
-    color: var(--color-texto-gris);
-    font-size: 14px;
-    margin-bottom: 15px;
+    color: var(--color-texto-gris); /* color gris para el texto secundario */
+    font-size: 14px; /* tamaño de fuente del texto de ubicación */
+    margin-bottom: 15px; /* espacio debajo de la ubicación */
 }
 
 /* descripcion larga del hotel */
 .hotel-desc {
-    color: var(--color-texto-gris);
-    font-size: 15px;
-    margin-bottom: 20px;
+    color: var(--color-texto-gris); /* color gris para el párrafo descriptivo */
+    font-size: 15px; /* tamaño de texto de la descripción */
+    margin-bottom: 20px; /* espacio debajo de la descripción */
 }
 
 /* lista de atributos/servicios del hotel (spa, helipuerto, etc) */
 .atributos {
-    list-style: none; /* quitamos los puntos por defecto de la lista */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px 20px; /* espacio entre filas y entre columnas */
-    margin-bottom: 25px;
-    padding-top: 20px;
-    border-top: 1px solid #262626; /* linea que separa la descripcion de los atributos */
+    list-style: none; /* quita los puntos predeterminados de la lista */
+    display: flex; /* usa flexbox para alinear atributos */
+    flex-wrap: wrap; /* permite que los atributos pasen a la siguiente línea */
+    gap: 12px 20px; /* espacio entre atributos vertical y horizontal */
+    margin-bottom: 25px; /* espacio abajo de la lista de atributos */
+    padding-top: 20px; /* espacio arriba dentro de la lista */
+    border-top: 1px solid #262626; /* línea separadora entre descripción y atributos */
 }
 
 .atributos li {
-    color: var(--color-texto-gris);
-    font-size: 14px;
-    flex: 1 1 40%; /* 2 atributos por fila */
+    color: var(--color-texto-gris); /* color gris del texto de cada atributo */
+    font-size: 14px; /* tamaño de fuente de los atributos */
+    flex: 1 1 40%; /* cada atributo ocupa aproximadamente el 40% del ancho */
 }
 
 /* fila final con el precio y el boton de reservar */
 .info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; /* usa flexbox para la fila de precio y botón */
+    align-items: center; /* alinea verticalmente el contenido */
+    justify-content: space-between; /* separa precio y botón a los extremos */
 }
 
 /* contenedor del precio, en columna (palabra "Desde" arriba del monto) */
 .precio {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* usa flexbox para alinear el texto del precio */
+    flex-direction: column; /* coloca los elementos en columna */
 }
 
 .desde {
-    color: var(--color-texto-gris);
-    font-size: 13px;
+    color: var(--color-texto-gris); /* color gris para la etiqueta "Desde" */
+    font-size: 13px; /* tamaño de fuente pequeño */
 }
 
 /* monto del precio, grande y dorado */
 .monto {
-    color: var(--color-dorado);
-    font-family: var(--fuente-titulos);
-    font-size: 28px;
-    font-weight: 700;
+    color: var(--color-dorado); /* color dorado para el precio */
+    font-family: var(--fuente-titulos); /* fuente de título para el monto */
+    font-size: 28px; /* tamaño grande del monto */
+    font-weight: 700; /* negrita para destacar el monto */
 }
 
 .noche {
-    color: var(--color-texto-gris);
-    font-size: 13px;
+    color: var(--color-texto-gris); /* color gris para el texto "/ noche" */
+    font-size: 13px; /* tamaño de fuente pequeño */
 }
 
 /* boton mas pequeño que el boton normal, usado dentro de las tarjetas */
 .btn-sm {
-    padding: 10px 22px;
+    padding: 10px 22px; /* relleno del botón pequeño */
 }

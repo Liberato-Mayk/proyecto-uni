@@ -3,138 +3,138 @@
 =========================*/
 
 .footer{
-    background:#1a1a2e;
-    color:#e0e0e0;
-    padding-top:60px;
+    background:#1a1a2e; /* fondo oscuro del footer */
+    color:#e0e0e0; /* color base del texto en el footer */
+    padding-top:60px; /* espacio interno superior para separar del contenido */
 }
 
 .footer-container{
-    max-width:1200px;
-    margin:0 auto;
-    padding:0 20px 40px;
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr;
-    gap:40px;
+    max-width:1200px; /* ancho máximo del contenido del footer */
+    margin:0 auto; /* centra el footer en pantallas anchas */
+    padding:0 20px 40px; /* espacio interno: arriba, laterales y abajo */
+    display:grid; /* usa grid para distribuir las columnas */
+    grid-template-columns:2fr 1fr 1fr; /* columna grande + dos columnas pequeñas */
+    gap:40px; /* espacio entre columnas */
 }
 
 /* Logo / descripción */
 .footer-logo{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
+    display:flex; /* usa flexbox para el logo y el texto */
+    flex-direction:column; /* organiza el contenido en columna */
+    align-items:flex-start; /* alinea los elementos al inicio del contenedor */
 }
 
 .footer-logo img{
-    width:45px;
-    height:45px;
-    object-fit:contain;
-    margin-bottom:10px;
+    width:45px; /* ancho del icono del logo */
+    height:45px; /* alto del icono del logo */
+    object-fit:contain; /* mantiene la proporción de la imagen */
+    margin-bottom:10px; /* espacio debajo de la imagen */
 }
 
 .footer-logo h2{
-    color:#ffffff;
-    font-size:1.3rem;
-    font-weight:700;
-    letter-spacing:1px;
-    margin:0 0 12px;
+    color:#ffffff; /* texto blanco para el título */
+    font-size:1.3rem; /* tamaño del logo/título */
+    font-weight:700; /* peso de fuente fuerte */
+    letter-spacing:1px; /* espacio entre letras */
+    margin:0 0 12px; /* elimina márgenes laterales y agrega espacio inferior */
 }
 
 .footer-logo p{
-    font-size:.9rem;
-    line-height:1.6;
-    color:#b8b8b8;
-    max-width:320px;
+    font-size:.9rem; /* tamaño de fuente secundario */
+    line-height:1.6; /* mayor altura de línea para lectura */
+    color:#b8b8b8; /* color gris para el párrafo */
+    max-width:320px; /* ancho máximo del texto descriptivo */
 }
 
 /* Navegación */
 .footer-nav h3,
 .footer-social h3{
-    color:#ffffff;
-    font-size:1.05rem;
-    margin-bottom:18px;
-    position:relative;
+    color:#ffffff; /* título de sección en blanco */
+    font-size:1.05rem; /* tamaño de fuente de los encabezados */
+    margin-bottom:18px; /* espacio debajo del título */
+    position:relative; /* permite decoraciones futuras si se necesitan */
 }
 
 .footer-nav{
-    display:flex;
-    flex-direction:column;
+    display:flex; /* usa flexbox para la lista de enlaces */
+    flex-direction:column; /* organiza los enlaces en columna */
 }
 
 .footer-nav a{
-    color:#e0e0e0;
-    text-decoration:none;
-    font-size:.95rem;
-    margin-bottom:12px;
-    transition:color .3s ease;
-    width:fit-content;
+    color:#e0e0e0; /* color base de los enlaces */
+    text-decoration:none; /* quita el subrayado predeterminado */
+    font-size:.95rem; /* tamaño de fuente de los enlaces */
+    margin-bottom:12px; /* espacio entre enlaces */
+    transition:color .3s ease; /* transición suave de color */
+    width:fit-content; /* ancho ajustado al contenido */
 }
 
 .footer-nav a:hover{
-    color:#e94560;
+    color:#e94560; /* color rojo al pasar el mouse */
 }
 
 /* Redes sociales */
 .social-icons{
-    display:flex;
-    gap:15px;
+    display:flex; /* coloca los iconos en fila */
+    gap:15px; /* espacio entre iconos */
 }
 
 .social-icons a{
-    background:#16213e;
-    border:2px solid #4b3f8a;
-    border-radius:50%;
-    width:42px;
-    height:42px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    transition:.3s ease;
+    background:#16213e; /* fondo oscuro del botón social */
+    border:2px solid #4b3f8a; /* borde morado suave */
+    border-radius:50%; /* botón redondo */
+    width:42px; /* ancho del botón social */
+    height:42px; /* alto del botón social */
+    display:flex; /* centra el icono dentro del botón */
+    align-items:center; /* centra verticalmente */
+    justify-content:center; /* centra horizontalmente */
+    transition:.3s ease; /* transición suave en hover */
 }
 
 .social-icons a:hover{
-    border-color:#e94560;
-    transform:translateY(-3px);
+    border-color:#e94560; /* cambia el borde a rojo en hover */
+    transform:translateY(-3px); /* eleva ligeramente el botón */
 }
 
 .social-icons img{
-    width:20px;
-    height:20px;
-    filter:invert(1);
+    width:20px; /* ancho del icono dentro del botón */
+    height:20px; /* alto del icono dentro del botón */
+    filter:invert(1); /* invierte el color del icono para contraste */
 }
 
 /* Barra inferior */
 .footer-bottom{
-    border-top:1px solid rgba(255,255,255,.1);
-    text-align:center;
-    padding:18px 20px;
+    border-top:1px solid rgba(255,255,255,.1); /* línea superior separadora */
+    text-align:center; /* centra el texto en la barra inferior */
+    padding:18px 20px; /* espacio interno de la barra inferior */
 }
 
 .footer-bottom p{
-    font-size:.85rem;
-    color:#8a8a8a;
-    margin:0;
+    font-size:.85rem; /* tamaño pequeño para el texto de derechos */
+    color:#8a8a8a; /* color gris para el texto secundario */
+    margin:0; /* elimina margen predeterminado */
 }
 
 /* Responsive */
 @media(max-width:768px){
     .footer-container{
-        grid-template-columns:1fr;
-        text-align:center;
+        grid-template-columns:1fr; /* una columna en pantallas pequeñas */
+        text-align:center; /* centra el contenido de cada sección */
     }
 
     .footer-logo{
-        align-items:center;
+        align-items:center; /* centra los elementos del logo */
     }
 
     .footer-logo p{
-        max-width:100%;
+        max-width:100%; /* permite que el párrafo ocupe todo el ancho */
     }
 
     .footer-nav{
-        align-items:center;
+        align-items:center; /* centra los enlaces de navegación */
     }
 
     .social-icons{
-        justify-content:center;
+        justify-content:center; /* centra los iconos sociales */
     }
 }
